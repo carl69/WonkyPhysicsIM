@@ -8,18 +8,13 @@ public class ZombieController : MonoBehaviour
     public Vector3 walkTarget;
     public NavMeshAgent ZombieAgent;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+    public void UpdateWalkPoint(Vector3 walkpoint)
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            ZombieAgent.SetDestination(walkTarget);
-        }
+
+        ZombieAgent.SetDestination(walkpoint);
+
     }
 }
