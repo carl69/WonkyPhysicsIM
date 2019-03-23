@@ -1,0 +1,106 @@
+Initialize engine version: 5.6.3f1 (d3101c3b8468)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970M (ID=0x13d8)
+    Vendor:   NVIDIA
+    VRAM:     3037 MB
+    Driver:   21.21.13.7654
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.304 seconds
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\GameJamGame2018\GGJ2018_Build_Jhs\GGJ2018_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 3.397337 ms
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Init fow
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyMelee (120) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyMelee(2) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyMelee (83) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyRanged (4) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyMelee (120) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyMelee(2) Unit stuck
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2568 -> priority: 1 
+  Thread -> id: 508 -> priority: 1 
+Main Camera (ResourceMonitor)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

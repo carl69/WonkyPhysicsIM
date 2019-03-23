@@ -1,0 +1,315 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="lobbyMusic_data" version="1.3.0" audacityversion="2.1.2" sel0="5.9791383220" sel1="29.8863718821" vpos="64" h="22.1982766440" zoom="172.2656250000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags/>
+	<wavetrack name="Lydspor" channel="0" linked="1" mute="0" solo="0" height="76" minimized="0" isSelected="0" rate="44100" gain="0.070795" pan="0.0">
+		<waveclip offset="-0.13000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1054309">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000367.au" len="142130" min="-0.625244" max="0.609741" rms="0.094973"/>
+				</waveblock>
+				<waveblock start="142130">
+					<simpleblockfile filename="e0000b1d.au" len="142131" min="-0.625244" max="0.609741" rms="0.08998"/>
+				</waveblock>
+				<waveblock start="284261">
+					<simpleblockfile filename="e0000088.au" len="131072" min="-0.625244" max="0.609741" rms="0.109879"/>
+				</waveblock>
+				<waveblock start="415333">
+					<simpleblockfile filename="e0000767.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+				<waveblock start="628325">
+					<simpleblockfile filename="e0000d37.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+				<waveblock start="841317">
+					<simpleblockfile filename="e00006aa.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="19">
+				<controlpoint t="0.188049886621" val="0.478873252869"/>
+				<controlpoint t="0.420249433107" val="0.669014096260"/>
+				<controlpoint t="2.893174603175" val="0.978873252869"/>
+				<controlpoint t="4.414081632653" val="0.823943674564"/>
+				<controlpoint t="6.608367346939" val="1.288732409477"/>
+				<controlpoint t="8.570453514739" val="1.218309879303"/>
+				<controlpoint t="10.764739229025" val="0.922535240650"/>
+				<controlpoint t="11.507777777778" val="0.725352108479"/>
+				<controlpoint t="11.867687074830" val="0.577464818954"/>
+				<controlpoint t="12.007006802721" val="0.535211265087"/>
+				<controlpoint t="12.018611780045" val="0.535211265087"/>
+				<controlpoint t="12.018616780045" val="0.531150115465"/>
+				<controlpoint t="12.178866213152" val="0.669014096260"/>
+				<controlpoint t="14.651791383220" val="0.978873252869"/>
+				<controlpoint t="16.172698412698" val="0.823943674564"/>
+				<controlpoint t="18.366984126984" val="1.288732409477"/>
+				<controlpoint t="20.329070294785" val="1.218309879303"/>
+				<controlpoint t="22.523356009070" val="0.922535240650"/>
+				<controlpoint t="23.266394557823" val="0.725352108479"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="1" linked="0" mute="0" solo="0" height="76" minimized="0" isSelected="0" rate="44100" gain="0.070795" pan="0.0">
+		<waveclip offset="-0.13000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1054309">
+				<waveblock start="0">
+					<simpleblockfile filename="e000070b.au" len="142130" min="-0.625275" max="0.609741" rms="0.094973"/>
+				</waveblock>
+				<waveblock start="142130">
+					<simpleblockfile filename="e0000569.au" len="142131" min="-0.625275" max="0.609741" rms="0.08998"/>
+				</waveblock>
+				<waveblock start="284261">
+					<simpleblockfile filename="e0000099.au" len="131072" min="-0.625275" max="0.609741" rms="0.109879"/>
+				</waveblock>
+				<waveblock start="415333">
+					<simpleblockfile filename="e00003ff.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+				<waveblock start="628325">
+					<simpleblockfile filename="e00007f3.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+				<waveblock start="841317">
+					<simpleblockfile filename="e00002c0.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="19">
+				<controlpoint t="0.188049886621" val="0.478873252869"/>
+				<controlpoint t="0.420249433107" val="0.669014096260"/>
+				<controlpoint t="2.893174603175" val="0.978873252869"/>
+				<controlpoint t="4.414081632653" val="0.823943674564"/>
+				<controlpoint t="6.608367346939" val="1.288732409477"/>
+				<controlpoint t="8.570453514739" val="1.218309879303"/>
+				<controlpoint t="10.764739229025" val="0.922535240650"/>
+				<controlpoint t="11.507777777778" val="0.725352108479"/>
+				<controlpoint t="11.867687074830" val="0.577464818954"/>
+				<controlpoint t="12.007006802721" val="0.535211265087"/>
+				<controlpoint t="12.018611780045" val="0.535211265087"/>
+				<controlpoint t="12.018616780045" val="0.531150115465"/>
+				<controlpoint t="12.178866213152" val="0.669014096260"/>
+				<controlpoint t="14.651791383220" val="0.978873252869"/>
+				<controlpoint t="16.172698412698" val="0.823943674564"/>
+				<controlpoint t="18.366984126984" val="1.288732409477"/>
+				<controlpoint t="20.329070294785" val="1.218309879303"/>
+				<controlpoint t="22.523356009070" val="0.922535240650"/>
+				<controlpoint t="23.266394557823" val="0.725352108479"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="0" linked="1" mute="0" solo="0" height="63" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="4.90873016">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="840960">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000764.au" len="262144" min="-0.994446" max="0.994354" rms="0.285981"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000dcb.au" len="262144" min="-0.99472" max="0.99469" rms="0.242471"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000c79.au" len="262144" min="-0.996613" max="0.996277" rms="0.258097"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0000a90.au" len="54528" min="-0.283722" max="0.278564" rms="0.084036"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="1" linked="0" mute="0" solo="0" height="63" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="4.90873016">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="840960">
+				<waveblock start="0">
+					<simpleblockfile filename="e00003c3.au" len="262144" min="-0.994415" max="0.994324" rms="0.285981"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e000035a.au" len="262144" min="-0.99472" max="0.99469" rms="0.242471"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000d7f.au" len="262144" min="-0.996613" max="0.996246" rms="0.258097"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0000480.au" len="54528" min="-0.283691" max="0.278534" rms="0.084036"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="0" linked="1" mute="0" solo="0" height="60" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="5.45439909">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="851840">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ff2.au" len="262144" min="-0.498657" max="0.550598" rms="0.054164"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e00009c8.au" len="262144" min="-0.40097" max="0.410065" rms="0.054208"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e00004c1.au" len="262144" min="-0.416809" max="0.451508" rms="0.057661"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e00002fd.au" len="65408" min="-0.16983" max="0.146088" rms="0.0266"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="1" linked="0" mute="0" solo="0" height="60" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="5.45439909">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="851840">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ffe.au" len="262144" min="-0.498657" max="0.550598" rms="0.054165"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000647.au" len="262144" min="-0.401001" max="0.410034" rms="0.054208"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000d71.au" len="262144" min="-0.416809" max="0.451538" rms="0.057661"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e000031a.au" len="65408" min="-0.1698" max="0.146088" rms="0.0266"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="0" linked="1" mute="0" solo="0" height="72" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="-0.26000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="11466">
+				<waveblock start="0">
+					<simpleblockfile filename="e00008a6.au" len="11466" min="-0.001617" max="0.001465" rms="0.000166"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="5.80498866">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="851840">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ff2.au" len="262144" min="-0.498657" max="0.550598" rms="0.054164"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e00009c8.au" len="262144" min="-0.40097" max="0.410065" rms="0.054208"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e00004c1.au" len="262144" min="-0.416809" max="0.451508" rms="0.057661"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e00002fd.au" len="65408" min="-0.16983" max="0.146088" rms="0.0266"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="1" linked="0" mute="0" solo="0" height="72" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="-0.26000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="11466">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000eff.au" len="11466" min="-0.001648" max="0.001465" rms="0.000166"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="5.80498866">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="851840">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000ffe.au" len="262144" min="-0.498657" max="0.550598" rms="0.054165"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0000647.au" len="262144" min="-0.401001" max="0.410034" rms="0.054208"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0000d71.au" len="262144" min="-0.416809" max="0.451538" rms="0.057661"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e000031a.au" len="65408" min="-0.1698" max="0.146088" rms="0.0266"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="0.015849" pan="0.0">
+		<waveclip offset="5.97913832">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1054309">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000367.au" len="142130" min="-0.625244" max="0.609741" rms="0.094973"/>
+				</waveblock>
+				<waveblock start="142130">
+					<simpleblockfile filename="e0000b1d.au" len="142131" min="-0.625244" max="0.609741" rms="0.08998"/>
+				</waveblock>
+				<waveblock start="284261">
+					<simpleblockfile filename="e0000088.au" len="131072" min="-0.625244" max="0.609741" rms="0.109879"/>
+				</waveblock>
+				<waveblock start="415333">
+					<simpleblockfile filename="e0000767.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+				<waveblock start="628325">
+					<simpleblockfile filename="e0000d37.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+				<waveblock start="841317">
+					<simpleblockfile filename="e00006aa.au" len="212992" min="-0.625244" max="0.609741" rms="0.099044"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="19">
+				<controlpoint t="0.188049886621" val="0.478873252869"/>
+				<controlpoint t="0.420249433107" val="0.669014096260"/>
+				<controlpoint t="2.893174603175" val="0.978873252869"/>
+				<controlpoint t="4.414081632653" val="0.823943674564"/>
+				<controlpoint t="6.608367346939" val="1.288732409477"/>
+				<controlpoint t="8.570453514739" val="1.218309879303"/>
+				<controlpoint t="10.764739229025" val="0.922535240650"/>
+				<controlpoint t="11.507777777778" val="0.725352108479"/>
+				<controlpoint t="11.867687074830" val="0.577464818954"/>
+				<controlpoint t="12.007006802721" val="0.535211265087"/>
+				<controlpoint t="12.018611780045" val="0.535211265087"/>
+				<controlpoint t="12.018616780045" val="0.531150115465"/>
+				<controlpoint t="12.178866213152" val="0.669014096260"/>
+				<controlpoint t="14.651791383220" val="0.978873252869"/>
+				<controlpoint t="16.172698412698" val="0.823943674564"/>
+				<controlpoint t="18.366984126984" val="1.288732409477"/>
+				<controlpoint t="20.329070294785" val="1.218309879303"/>
+				<controlpoint t="22.523356009070" val="0.922535240650"/>
+				<controlpoint t="23.266394557823" val="0.725352108479"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Lydspor" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="0.015849" pan="0.0">
+		<waveclip offset="5.97913832">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="1054309">
+				<waveblock start="0">
+					<simpleblockfile filename="e000070b.au" len="142130" min="-0.625275" max="0.609741" rms="0.094973"/>
+				</waveblock>
+				<waveblock start="142130">
+					<simpleblockfile filename="e0000569.au" len="142131" min="-0.625275" max="0.609741" rms="0.08998"/>
+				</waveblock>
+				<waveblock start="284261">
+					<simpleblockfile filename="e0000099.au" len="131072" min="-0.625275" max="0.609741" rms="0.109879"/>
+				</waveblock>
+				<waveblock start="415333">
+					<simpleblockfile filename="e00003ff.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+				<waveblock start="628325">
+					<simpleblockfile filename="e00007f3.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+				<waveblock start="841317">
+					<simpleblockfile filename="e00002c0.au" len="212992" min="-0.625275" max="0.609741" rms="0.099043"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="19">
+				<controlpoint t="0.188049886621" val="0.478873252869"/>
+				<controlpoint t="0.420249433107" val="0.669014096260"/>
+				<controlpoint t="2.893174603175" val="0.978873252869"/>
+				<controlpoint t="4.414081632653" val="0.823943674564"/>
+				<controlpoint t="6.608367346939" val="1.288732409477"/>
+				<controlpoint t="8.570453514739" val="1.218309879303"/>
+				<controlpoint t="10.764739229025" val="0.922535240650"/>
+				<controlpoint t="11.507777777778" val="0.725352108479"/>
+				<controlpoint t="11.867687074830" val="0.577464818954"/>
+				<controlpoint t="12.007006802721" val="0.535211265087"/>
+				<controlpoint t="12.018611780045" val="0.535211265087"/>
+				<controlpoint t="12.018616780045" val="0.531150115465"/>
+				<controlpoint t="12.178866213152" val="0.669014096260"/>
+				<controlpoint t="14.651791383220" val="0.978873252869"/>
+				<controlpoint t="16.172698412698" val="0.823943674564"/>
+				<controlpoint t="18.366984126984" val="1.288732409477"/>
+				<controlpoint t="20.329070294785" val="1.218309879303"/>
+				<controlpoint t="22.523356009070" val="0.922535240650"/>
+				<controlpoint t="23.266394557823" val="0.725352108479"/>
+			</envelope>
+		</waveclip>
+	</wavetrack>
+</project>
