@@ -504,8 +504,8 @@ MonoBehaviour:
   whatToStart: 3
   org: {fileID: 24500006, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
   lowerd: {fileID: 245567006420145830, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
-  Ac: {fileID: 8300000, guid: 554acef632b0c8b4086656404f0f167b, type: 3}
-  parentAudio: {fileID: 96923550}
+  Ac: {fileID: 0}
+  parentAudio: {fileID: 0}
 --- !u!1 &49512428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,8 +5612,8 @@ MonoBehaviour:
   whatToStart: 1
   org: {fileID: 24500006, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
   lowerd: {fileID: 245567006420145830, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
-  Ac: {fileID: 8300000, guid: f870ef9c80c7dff4f8b1117f7e6672e0, type: 3}
-  parentAudio: {fileID: 96923550}
+  Ac: {fileID: 0}
+  parentAudio: {fileID: 0}
 --- !u!1 &454681753
 GameObject:
   m_ObjectHideFlags: 0
@@ -12239,8 +12239,8 @@ MonoBehaviour:
   whatToStart: 2
   org: {fileID: 24500006, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
   lowerd: {fileID: 245567006420145830, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
-  Ac: {fileID: 8300000, guid: d2556a9f7841dad4b97037d24c5430d6, type: 3}
-  parentAudio: {fileID: 96923550}
+  Ac: {fileID: 0}
+  parentAudio: {fileID: 0}
 --- !u!1 &851446923
 GameObject:
   m_ObjectHideFlags: 0
@@ -19988,8 +19988,8 @@ MonoBehaviour:
   whatToStart: 4
   org: {fileID: 24500006, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
   lowerd: {fileID: 245567006420145830, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
-  Ac: {fileID: 8300000, guid: f51bb92fa42bfb24d970bae10ac419e8, type: 3}
-  parentAudio: {fileID: 96923550}
+  Ac: {fileID: 0}
+  parentAudio: {fileID: 0}
 --- !u!1 &1300944437
 GameObject:
   m_ObjectHideFlags: 0
@@ -31555,8 +31555,8 @@ MonoBehaviour:
   whatToStart: 0
   org: {fileID: 24500006, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
   lowerd: {fileID: 245567006420145830, guid: b044c6b0620846f4fb5e2412837bfa7f, type: 2}
-  Ac: {fileID: 8300000, guid: 998b73705bea68b49aa4862595da5342, type: 3}
-  parentAudio: {fileID: 96923550}
+  Ac: {fileID: 0}
+  parentAudio: {fileID: 0}
 --- !u!1 &2079214853
 GameObject:
   m_ObjectHideFlags: 0
