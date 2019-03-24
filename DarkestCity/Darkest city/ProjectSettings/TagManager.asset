@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zombies
+  - ZombieLord
+  - Humans
   layers:
   - Default
   - TransparentFX
