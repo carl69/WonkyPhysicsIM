@@ -21,16 +21,13 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody>();
     }
 
-
-
     void Update()
     {
         // PLACEHOLDER MOVEMENT
         //transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * playerWalkSpeed * Time.deltaTime,0,0);
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            RaycastHit hit;
-            
+            RaycastHit hit;        
             RaycastHit hit2;
 
             float inputAxes = Input.GetAxis("Horizontal");
@@ -92,7 +89,7 @@ public class PlayerController : MonoBehaviour
             Down = false;
         }
 
-        if (true)
+        if (Down)
         {
             if (RB.velocity.y <= JumpArc)
             {
@@ -100,6 +97,8 @@ public class PlayerController : MonoBehaviour
                 Down = false;
             }
         }
+
+
     }
     bool Down = false;
 

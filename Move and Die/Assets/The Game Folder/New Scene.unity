@@ -237,7 +237,9 @@ MonoBehaviour:
   jumpForce: 11
   GravityDown: -15
   JumpArc: 7
-  isGrounded: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &772002811
 GameObject:
   m_ObjectHideFlags: 0
