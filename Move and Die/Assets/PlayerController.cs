@@ -11,23 +11,65 @@ public class PlayerController : MonoBehaviour
     public float JumpArc = 9;
 
     Rigidbody RB;
-    public bool isGrounded = false;
 
-    // Start is called before the first frame update
+    [Header("Collision Detection")]
+    public LayerMask layerMask;
+    
+
     void Start()
     {
         RB = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
+
     void Update()
     {
-        transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * playerWalkSpeed * Time.deltaTime,0,0);
-
-        if (isGrounded)
+        // PLACEHOLDER MOVEMENT
+        //transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * playerWalkSpeed * Time.deltaTime,0,0);
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            if (Input.GetButtonDown("Jump"))
+            RaycastHit hit;
+            
+            RaycastHit hit2;
+
+            float inputAxes = Input.GetAxis("Horizontal");
+
+            if (Physics.Raycast(transform.position + new Vector3(0, 0.5f,0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit, 1, layerMask))
             {
+                Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit.distance, Color.yellow);
+
+
+
+            }
+            else if (Physics.Raycast(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit2, 1, layerMask))
+            {
+                Debug.DrawRay(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit2.distance, Color.yellow);
+
+            }
+            else
+            {
+                RB.velocity = new Vector3(
+                inputAxes * playerWalkSpeed,
+                RB.velocity.y,
+                0);
+            }
+
+        }
+
+
+
+        // JUMP
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 1, layerMask))
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow);
+
+
                 RB.velocity = new Vector3(
                     RB.velocity.x,
                     0,
@@ -36,21 +78,21 @@ public class PlayerController : MonoBehaviour
                 RB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 
                 StartCoroutine("GoingUp");
-            }
-        }
 
+            }
+
+        }
+        
         if (Input.GetButtonUp("Jump")) 
         {
             if (RB.velocity.y > 0)
             {
                 StartCoroutine("GoingDown");
             }
-            
             Down = false;
-
         }
 
-        if (Down)
+        if (true)
         {
             if (RB.velocity.y <= JumpArc)
             {
@@ -66,8 +108,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
 
-        Down = true;
-        
+        Down = true;       
     }
 
     IEnumerator GoingDown()
@@ -76,13 +117,5 @@ public class PlayerController : MonoBehaviour
         return null;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        isGrounded = true;
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        isGrounded = false;
-    }
 
 }
