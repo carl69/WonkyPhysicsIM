@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
         if (Down)
         {
-            if (RB.velocity.y <= 11)
+            if (RB.velocity.y <= 9)
             {
                 Debug.Log("???");
                 StartCoroutine("GoingDown");
