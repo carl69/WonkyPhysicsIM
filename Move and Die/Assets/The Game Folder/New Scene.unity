@@ -234,8 +234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerWalkSpeed: 5
-  jumpForce: 13
-  GravityDown: -20
+  jumpForce: 11
+  GravityDown: -15
+  JumpArc: 7
   isGrounded: 0
 --- !u!1 &772002811
 GameObject:

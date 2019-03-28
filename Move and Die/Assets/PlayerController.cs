@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [Header("Jump Config")]
     public float jumpForce = 100;
     public float GravityDown = 2;
-    float gravityGoinDown = 0;
+    public float JumpArc = 9;
 
     Rigidbody RB;
     public bool isGrounded = false;
@@ -39,18 +39,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Jump") && Down) 
+        if (Input.GetButtonUp("Jump")) 
         {
-            StartCoroutine("GoingDown");
+            if (RB.velocity.y > 0)
+            {
+                StartCoroutine("GoingDown");
+            }
+            
             Down = false;
 
         }
 
         if (Down)
         {
-            if (RB.velocity.y <= 9)
+            if (RB.velocity.y <= JumpArc)
             {
-                Debug.Log("???");
                 StartCoroutine("GoingDown");
                 Down = false;
             }
