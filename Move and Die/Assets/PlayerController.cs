@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,30 +28,36 @@ public class PlayerController : MonoBehaviour
         //transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * playerWalkSpeed * Time.deltaTime,0,0);
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            RaycastHit hit;        
-            RaycastHit hit2;
+            RaycastHit hit;
+            //RaycastHit hit2;
 
             float inputAxes = Input.GetAxis("Horizontal");
 
-            if (Physics.Raycast(transform.position + new Vector3(0, 0.5f,0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit, 1, layerMask))
+            if (Physics.Raycast(transform.position + new Vector3(0, 0f, 0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit, 1, layerMask))
             {
-                Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit.distance, Color.yellow);
+                Debug.DrawRay(transform.position + new Vector3(0, 0, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit.distance, Color.yellow);
 
 
-
-            }
-            else if (Physics.Raycast(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit2, 1, layerMask))
-            {
-                Debug.DrawRay(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit2.distance, Color.yellow);
 
             }
             else
             {
-                RB.velocity = new Vector3(
+            RB.velocity = new Vector3(
                 inputAxes * playerWalkSpeed,
                 RB.velocity.y,
                 0);
+
             }
+            //else if (Physics.Raycast(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * 2 * inputAxes), out hit2, 1, layerMask))
+            //{
+            //    Debug.DrawRay(transform.position + new Vector3(0, -0.4f, 0), transform.TransformDirection(Vector3.right * inputAxes) * hit2.distance, Color.yellow);
+
+            //}
+            //else
+            //{
+
+            
+            
 
         }
 
@@ -117,4 +124,10 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    // DYING
+    public void PlayerGotHit()
+    {
+        SceneManager.LoadScene(0);
+
+    }
 }
