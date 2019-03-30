@@ -8,7 +8,7 @@ public class bulletScript : MonoBehaviour
 
     void Update()
     {
-        transform.localPosition += transform.rotation * Vector3.left * Speed * Time.deltaTime;
+        transform.localPosition += transform.rotation * Vector3.forward * Speed * Time.deltaTime;
 
     }
 
