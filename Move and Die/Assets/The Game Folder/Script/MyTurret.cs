@@ -10,7 +10,8 @@ public class MyTurret : MonoBehaviour
     public GameObject bulletSpawner;
     public GameObject bullet;
 
-
+    public int countdownToBulletTime;
+    public int bulletTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,13 @@ public class MyTurret : MonoBehaviour
         }
         if (Input.anyKeyDown)
         {
-            GameObject.Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+            countdownToBulletTime -= 1;
+            if (countdownToBulletTime <= 0)
+            {
+                GameObject.Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                countdownToBulletTime = bulletTimer;
+            }
+            
         }
     }
     void lookAtPlayer()

@@ -233,6 +233,8 @@ MonoBehaviour:
   rotationDamping: 2
   bulletSpawner: {fileID: 7613178366894944740}
   bullet: {fileID: 7249912936731586143, guid: 8d7f3f90d9583274ab886aa7f989d83a, type: 3}
+  countdownToBulletTime: 0
+  bulletTimer: 4
 --- !u!1 &7613178366624845086
 GameObject:
   m_ObjectHideFlags: 0
