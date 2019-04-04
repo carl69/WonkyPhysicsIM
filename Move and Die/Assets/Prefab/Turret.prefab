@@ -232,7 +232,7 @@ MonoBehaviour:
   objectDistance: 0
   rotationDamping: 2
   bulletSpawner: {fileID: 7613178366894944740}
-  bullet: {fileID: 7545539922676886766, guid: 38b76c3a35a1dce44931e9d82e3b8df0, type: 3}
+  bullet: {fileID: 7249912936731586143, guid: 8d7f3f90d9583274ab886aa7f989d83a, type: 3}
 --- !u!1 &7613178366624845086
 GameObject:
   m_ObjectHideFlags: 0
