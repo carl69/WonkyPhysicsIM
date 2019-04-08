@@ -30,9 +30,9 @@ public class playerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Walking
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            float inputHorizontal = Input.GetAxis("Horizontal");
+            float inputHorizontal = Input.GetAxisRaw("Horizontal");
 
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.5f, JumpableLayers))
