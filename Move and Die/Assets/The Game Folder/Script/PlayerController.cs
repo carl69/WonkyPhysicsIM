@@ -124,7 +124,7 @@ public class PlayerController : MonoBehaviour
     // DYING
     public void PlayerGotHit()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
     }
 }
