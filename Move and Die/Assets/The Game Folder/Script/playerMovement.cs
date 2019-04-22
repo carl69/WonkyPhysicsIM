@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class playerMovement : MonoBehaviour
     public float fallSpeed = 2;
     float curFallSpeed = 0;
     public LayerMask JumpableLayers;
+
+    // IsGrounded
+    [Header("isGrounded Settings")]
+    public bool isGrounded = false;
+    float AirJumpTime = 0.1f;
+    float CurAirTimer = 0;
+
     // WALKING
     [Header("Walking Settings")]
     public float WalkingSpeed = 10;
@@ -47,6 +55,37 @@ public class playerMovement : MonoBehaviour
             }
 
         }
+
+        // Is Grounded
+        RaycastHit hitGround;
+        Vector3 RayStartPos = new Vector3(transform.position.x,
+            transform.position.y - 0f,
+            transform.position.z);
+
+        if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2), out hitGround, 0.6f, JumpableLayers))
+        {
+            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+            isGrounded = true;
+            CurAirTimer = AirJumpTime + Time.time;
+
+        }
+        else if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2), out hitGround, 0.6f, JumpableLayers))
+        {
+            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+            isGrounded = true;
+            CurAirTimer = AirJumpTime + Time.time;
+        }
+        else
+        {
+            if (CurAirTimer <= Time.time)
+            {
+                // Stop being grounded
+                isGrounded = false;
+            }
+
+        }
     }
 
     // Update is called once per frame
@@ -59,9 +98,11 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             // check if you are grounded
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 1, JumpableLayers)){
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * hit.distance, Color.yellow); // shows Debug
+            
+            if (isGrounded){
+                // no more extra airtime for you
+                CurAirTimer = 0;
+                isGrounded = false;
 
                 //setting maxHight
                 curJumpHight = JumpHight + transform.position.y;
@@ -121,5 +162,10 @@ public class playerMovement : MonoBehaviour
         }
         
     }
+    // DYING
+    public void PlayerGotHit()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
+    }
 }

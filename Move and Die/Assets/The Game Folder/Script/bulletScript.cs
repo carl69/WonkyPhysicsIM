@@ -16,7 +16,7 @@ public class bulletScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().PlayerGotHit();
+            other.GetComponent<playerMovement>().PlayerGotHit();
         }
         Destroy(this.gameObject);
     }

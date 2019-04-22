@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5301768643553264679}
   - component: {fileID: 5301768643553264676}
   - component: {fileID: 5301768643553264673}
-  - component: {fileID: 5301768643553264672}
   - component: {fileID: 1992363086812224749}
   - component: {fileID: 264650432}
   m_Layer: 0
@@ -97,26 +96,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 1
---- !u!114 &5301768643553264672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5301768643553264730}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c6bde83bf3423e4ab749b00db0f8b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerWalkSpeed: 9
-  jumpForce: 11
-  GravityDown: -15
-  JumpArc: 7
-  isGrounded: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!136 &1992363086812224749
 CapsuleCollider:
   m_ObjectHideFlags: 0

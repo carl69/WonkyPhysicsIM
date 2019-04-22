@@ -9,7 +9,7 @@ public class SpikeScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.transform.GetComponent<PlayerController>().PlayerGotHit();
+            collision.transform.GetComponent<playerMovement>().PlayerGotHit();
         }
     }
 }
