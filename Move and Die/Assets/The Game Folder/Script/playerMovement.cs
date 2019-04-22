@@ -51,7 +51,7 @@ public class playerMovement : MonoBehaviour
             else
             {
                 //RB.AddForce(Vector3.right * WalkingSpeed * inputHorizontal * Time.deltaTime,ForceMode.Impulse);
-                transform.position += Vector3.right * WalkingSpeed * inputHorizontal * Time.deltaTime;
+                transform.position += Vector3.right * WalkingSpeed * inputHorizontal;// * Time.deltaTime;
             }
 
         }
