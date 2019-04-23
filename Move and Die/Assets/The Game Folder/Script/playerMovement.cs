@@ -34,6 +34,9 @@ public class playerMovement : MonoBehaviour
     [HideInInspector]
     public Vector3 SpawnPos;
 
+    // Crouch
+
+
     //Refrences
     Rigidbody RB;
 
@@ -110,13 +113,17 @@ public class playerMovement : MonoBehaviour
             }
 
         }
+        anim.SetBool("IsGrounded", isGrounded);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Crouch
+        if (Input.GetButton("crouch"))
+        {
 
-
+        }
 
         //JUMPING 
         if (Input.GetButtonDown("Jump"))
