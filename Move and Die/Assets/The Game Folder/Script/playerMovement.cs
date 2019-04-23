@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
     // IsGrounded
     [Header("isGrounded Settings")]
     public bool isGrounded = false;
-    float AirJumpTime = 0.1f;
+    float AirJumpTime = 0.2f;
     float CurAirTimer = 0;
 
     // WALKING
@@ -41,11 +41,12 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             float inputHorizontal = Input.GetAxisRaw("Horizontal");
+            Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
 
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.5f, JumpableLayers))
+            if (Physics.Raycast(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.3f, JumpableLayers))
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.right * inputHorizontal), Color.yellow); // shows Debug
+                Debug.DrawRay(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), Color.yellow); // shows Debug
                 print("WALLS");
             }
             else
@@ -59,21 +60,28 @@ public class playerMovement : MonoBehaviour
         // Is Grounded
         RaycastHit hitGround;
         Vector3 RayStartPos = new Vector3(transform.position.x,
-            transform.position.y - 1f,
+            transform.position.y + 0.9f,
             transform.position.z);
 
-        if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2), out hitGround, 0.6f, JumpableLayers))
-        {
-            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-            isGrounded = true;
-            CurAirTimer = AirJumpTime + Time.time;
+        //if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2), out hitGround, 1f, JumpableLayers))
+        //{
+        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+        //    isGrounded = true;
+        //    CurAirTimer = AirJumpTime + Time.time;
 
-        }
-        else if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2), out hitGround, 0.6f, JumpableLayers))
+        //}
+        //else if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2), out hitGround, 1f, JumpableLayers))
+        //{
+        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+        //    isGrounded = true;
+        //    CurAirTimer = AirJumpTime + Time.time;
+        //}
+        // Checks under
+        if (Physics.Raycast(RayStartPos, transform.TransformDirection( Vector3.down), out hitGround, 1f, JumpableLayers))
         {
-            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
+            Debug.DrawRay(RayStartPos, transform.TransformDirection( Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
             CurAirTimer = AirJumpTime + Time.time;
         }
@@ -117,7 +125,7 @@ public class playerMovement : MonoBehaviour
         }
         if (Input.GetButtonUp("Jump"))
         {
-            curJumpHight = 0;
+            curJumpHight = curJumpHight / 2;
         }
 
         // FakeGravity
