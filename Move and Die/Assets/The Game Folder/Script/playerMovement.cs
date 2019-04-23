@@ -24,6 +24,13 @@ public class playerMovement : MonoBehaviour
     [Header("Walking Settings")]
     public float WalkingSpeed = 10;
 
+    // Animations
+    [Header("Animation Settings")]
+    public Animator anim;
+
+    // Death
+    [HideInInspector]
+    public Vector3 SpawnPos;
 
     //Refrences
     Rigidbody RB;
@@ -31,6 +38,7 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SpawnPos = transform.position;
         RB = GetComponent<Rigidbody>();
         curFallSpeed = fallSpeed;// set the fall speed on the start incase the player starts in the air
     }
@@ -51,9 +59,15 @@ public class playerMovement : MonoBehaviour
             }
             else
             {
-                //RB.AddForce(Vector3.right * WalkingSpeed * inputHorizontal * Time.deltaTime,ForceMode.Impulse);
+
+                anim.SetFloat("WalkSpeed", inputHorizontal);
                 transform.position += Vector3.right * WalkingSpeed * inputHorizontal;// * Time.deltaTime;
             }
+
+        }
+        else
+        {
+            anim.SetFloat("WalkSpeed", 0);
 
         }
 
@@ -136,6 +150,7 @@ public class playerMovement : MonoBehaviour
     // the jump start
     void JumpTakeOff()
     {
+        anim.SetTrigger("Jumping");
         RB.AddForce(Vector3.up * JumpSpeed,ForceMode.Impulse);
     }
 
@@ -173,7 +188,7 @@ public class playerMovement : MonoBehaviour
     // DYING
     public void PlayerGotHit()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-
+        //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        transform.position = SpawnPos;
     }
 }
