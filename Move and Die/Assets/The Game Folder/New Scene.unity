@@ -446,46 +446,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7249912936731586139, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7249912936731586139, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7249912936731586141, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 4623846cc8549fe48bdf83fbdd306dfb, type: 2}
-    - target: {fileID: 8062174936685550577, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 8062174936685550577, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 613902785622496777, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.x
-      value: 0.41568628
-      objectReference: {fileID: 0}
-    - target: {fileID: 613902785622496777, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.y
-      value: 0.14117649
-      objectReference: {fileID: 0}
-    - target: {fileID: 613902785622496777, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
-      value: 0.35011867
-      objectReference: {fileID: 0}
     - target: {fileID: 613902785622496778, guid: 8d7f3f90d9583274ab886aa7f989d83a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -495,21 +455,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929482248044447031, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.10902455
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929482248044447031, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9168522
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929482248044447031, guid: 8d7f3f90d9583274ab886aa7f989d83a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.9245283
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7f3f90d9583274ab886aa7f989d83a, type: 3}
