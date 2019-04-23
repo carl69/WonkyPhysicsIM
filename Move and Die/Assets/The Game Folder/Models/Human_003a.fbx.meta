@@ -4,11 +4,240 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Clavicle.L
+    100006: Clavicle.R
+    100008: Eye.L.001
+    100010: Eye.L.001_end
+    100012: Eye.R
+    100014: Eye.R_end
+    100016: Eye_Controller.L.001
+    100018: Eye_Controller.L.001_end
+    100020: Eye_Controller.R
+    100022: Eye_Controller.R_end
+    100024: Eye_Controller_Main
+    100026: Femur.L
+    100028: Femur.R
+    100030: Foot_Control.L
+    100032: Foot_Control.R
+    100034: Foot_IK.L
+    100036: Foot_IK.L_end
+    100038: Foot_IK.R
+    100040: Foot_IK.R_end
+    100042: Hand.L
+    100044: Hand.L.019
+    100046: Hand.L.019_end
+    100048: Hand.R
+    100050: Hand_Grip.L
+    100052: Hand_Grip.L_end
+    100054: Hand_Grip.R
+    100056: Hand_Grip.R_end
+    100058: Hand_Index01.L
+    100060: Hand_Index01.R
+    100062: Hand_Index02.L
+    100064: Hand_Index02.R
+    100066: Hand_Index03.L
+    100068: Hand_Index03.L_end
+    100070: Hand_Index03.R
+    100072: Hand_Index03.R_end
+    100074: Hand_Little01.L
+    100076: Hand_Little01.R
+    100078: Hand_Little02.L
+    100080: Hand_Little02.R
+    100082: Hand_Little03.L
+    100084: Hand_Little03.L_end
+    100086: Hand_Little03.R
+    100088: Hand_Little03.R_end
+    100090: Hand_Middle01.L
+    100092: Hand_Middle01.R
+    100094: Hand_Middle02.L
+    100096: Hand_Middle02.R
+    100098: Hand_Middle03.L
+    100100: Hand_Middle03.L_end
+    100102: Hand_Middle03.R
+    100104: Hand_Middle03.R_end
+    100106: Hand_Ring01.L
+    100108: Hand_Ring01.R
+    100110: Hand_Ring02.L
+    100112: Hand_Ring02.R
+    100114: Hand_Ring03.L
+    100116: Hand_Ring03.L_end
+    100118: Hand_Ring03.R
+    100120: Hand_Ring03.R_end
+    100122: Hand_Thumb01.L
+    100124: Hand_Thumb01.R
+    100126: Hand_Thumb02.L
+    100128: Hand_Thumb02.R
+    100130: Hand_Thumb03.L
+    100132: Hand_Thumb03.L_end
+    100134: Hand_Thumb03.R
+    100136: Hand_Thumb03.R_end
+    100138: Head
+    100140: Hip_root
+    100142: HipControl
+    100144: Human_Mesh
+    100146: Humerus.L
+    100148: Humerus.L.001
+    100150: Humerus.R
+    100152: Humerus.R.001
+    100154: Metatarsals.L
+    100156: Metatarsals.L_end
+    100158: Metatarsals.R
+    100160: Metatarsals.R_end
+    100162: Neck.001
+    100164: Neck.002
+    100166: root_bone
+    100168: spine.001
+    100170: spine.002
+    100172: spine.003
+    100174: Tail.001
+    100176: Tail.002
+    100178: Tail.003
+    100180: Tail.004
+    100182: Tail.005
+    100184: Tail.006
+    100186: Tail.007
+    100188: Tail.008
+    100190: Tail.009
+    100192: Tail.010
+    100194: Tail.011
+    100196: Tail.012
+    100198: Tail.012_end
+    100200: Tail_IK
+    100202: Tail_IK_end
+    100204: Tarsals.L
+    100206: Tarsals.R
+    100208: Tibia.L
+    100210: Tibia.L_end
+    100212: Tibia.R
+    100214: Tibia.R_end
+    100216: Ulna.L
+    100218: Ulna.L.001
+    100220: Ulna.R
+    100222: Ulna.R.001
     400000: //RootNode
+    400002: Armature
+    400004: Clavicle.L
+    400006: Clavicle.R
+    400008: Eye.L.001
+    400010: Eye.L.001_end
+    400012: Eye.R
+    400014: Eye.R_end
+    400016: Eye_Controller.L.001
+    400018: Eye_Controller.L.001_end
+    400020: Eye_Controller.R
+    400022: Eye_Controller.R_end
+    400024: Eye_Controller_Main
+    400026: Femur.L
+    400028: Femur.R
+    400030: Foot_Control.L
+    400032: Foot_Control.R
+    400034: Foot_IK.L
+    400036: Foot_IK.L_end
+    400038: Foot_IK.R
+    400040: Foot_IK.R_end
+    400042: Hand.L
+    400044: Hand.L.019
+    400046: Hand.L.019_end
+    400048: Hand.R
+    400050: Hand_Grip.L
+    400052: Hand_Grip.L_end
+    400054: Hand_Grip.R
+    400056: Hand_Grip.R_end
+    400058: Hand_Index01.L
+    400060: Hand_Index01.R
+    400062: Hand_Index02.L
+    400064: Hand_Index02.R
+    400066: Hand_Index03.L
+    400068: Hand_Index03.L_end
+    400070: Hand_Index03.R
+    400072: Hand_Index03.R_end
+    400074: Hand_Little01.L
+    400076: Hand_Little01.R
+    400078: Hand_Little02.L
+    400080: Hand_Little02.R
+    400082: Hand_Little03.L
+    400084: Hand_Little03.L_end
+    400086: Hand_Little03.R
+    400088: Hand_Little03.R_end
+    400090: Hand_Middle01.L
+    400092: Hand_Middle01.R
+    400094: Hand_Middle02.L
+    400096: Hand_Middle02.R
+    400098: Hand_Middle03.L
+    400100: Hand_Middle03.L_end
+    400102: Hand_Middle03.R
+    400104: Hand_Middle03.R_end
+    400106: Hand_Ring01.L
+    400108: Hand_Ring01.R
+    400110: Hand_Ring02.L
+    400112: Hand_Ring02.R
+    400114: Hand_Ring03.L
+    400116: Hand_Ring03.L_end
+    400118: Hand_Ring03.R
+    400120: Hand_Ring03.R_end
+    400122: Hand_Thumb01.L
+    400124: Hand_Thumb01.R
+    400126: Hand_Thumb02.L
+    400128: Hand_Thumb02.R
+    400130: Hand_Thumb03.L
+    400132: Hand_Thumb03.L_end
+    400134: Hand_Thumb03.R
+    400136: Hand_Thumb03.R_end
+    400138: Head
+    400140: Hip_root
+    400142: HipControl
+    400144: Human_Mesh
+    400146: Humerus.L
+    400148: Humerus.L.001
+    400150: Humerus.R
+    400152: Humerus.R.001
+    400154: Metatarsals.L
+    400156: Metatarsals.L_end
+    400158: Metatarsals.R
+    400160: Metatarsals.R_end
+    400162: Neck.001
+    400164: Neck.002
+    400166: root_bone
+    400168: spine.001
+    400170: spine.002
+    400172: spine.003
+    400174: Tail.001
+    400176: Tail.002
+    400178: Tail.003
+    400180: Tail.004
+    400182: Tail.005
+    400184: Tail.006
+    400186: Tail.007
+    400188: Tail.008
+    400190: Tail.009
+    400192: Tail.010
+    400194: Tail.011
+    400196: Tail.012
+    400198: Tail.012_end
+    400200: Tail_IK
+    400202: Tail_IK_end
+    400204: Tarsals.L
+    400206: Tarsals.R
+    400208: Tibia.L
+    400210: Tibia.L_end
+    400212: Tibia.R
+    400214: Tibia.R_end
+    400216: Ulna.L
+    400218: Ulna.L.001
+    400220: Ulna.R
+    400222: Ulna.R.001
     2100000: Human_Mesh
     2300000: //RootNode
+    2300002: Human_Mesh
     3300000: //RootNode
+    3300002: Human_Mesh
     4300000: Human_Mesh
+    7400000: Armature|Combat_Attack_FerventAnger
+    7400002: Armature|Combat_Attack_FerventAnger.001
+    7400004: Armature|Movement_Running
+    9500000: //RootNode
+    13700000: Human_Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -29,14 +258,42 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Movement_Running
+      takeName: Armature|Movement_Running
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -61,8 +318,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -86,10 +343,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
