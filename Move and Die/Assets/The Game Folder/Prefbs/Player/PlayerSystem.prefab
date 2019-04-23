@@ -99,10 +99,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 264650432, guid: bf27818e5509810429e1d7e897355300, type: 3}
-      propertyPath: WalkingSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf27818e5509810429e1d7e897355300, type: 3}
 --- !u!4 &5412340363597334171 stripped
@@ -136,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 1924751572648917494, guid: 7a064aa6f356d944bb1e23181c2e416a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -9.31
       objectReference: {fileID: 0}
     - target: {fileID: 1924751572648917494, guid: 7a064aa6f356d944bb1e23181c2e416a,
         type: 3}
@@ -178,6 +174,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1924751572648917495, guid: 7a064aa6f356d944bb1e23181c2e416a,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 5412340363597334171}
     - target: {fileID: 1924751572648917492, guid: 7a064aa6f356d944bb1e23181c2e416a,
         type: 3}
       propertyPath: Player

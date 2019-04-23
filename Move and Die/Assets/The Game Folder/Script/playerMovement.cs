@@ -41,7 +41,7 @@ public class playerMovement : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             float inputHorizontal = Input.GetAxisRaw("Horizontal");
-            Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
 
             RaycastHit hit;
             if (Physics.Raycast(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.3f, JumpableLayers))

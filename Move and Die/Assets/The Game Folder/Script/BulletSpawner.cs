@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject Bullets;
+    public Transform Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class BulletSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.GetButtonDown("SpawnBullet"))
         {
 
 
@@ -24,7 +25,7 @@ public class BulletSpawner : MonoBehaviour
             // Bullet Pos
             bullet.transform.position = new Vector3(
                 transform.position.x + 15,
-                transform.position.y + Random.Range(-3,3),
+                Player.position.y + Random.Range(0,4),
                 0);
         }
     }

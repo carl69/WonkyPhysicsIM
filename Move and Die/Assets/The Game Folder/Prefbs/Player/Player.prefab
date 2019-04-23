@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067a4afb48cbca94aa1c729178dfe600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpSpeed: 15
+  JumpSpeed: 13
   JumpHight: 4
   fallSpeed: 30
   JumpableLayers:
