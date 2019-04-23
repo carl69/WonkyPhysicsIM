@@ -130,7 +130,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   isGrounded: 0
-  WalkingSpeed: 10
+  WalkingSpeed: 0.2
 --- !u!1001 &4175821049075814526
 PrefabInstance:
   m_ObjectHideFlags: 0
