@@ -29,6 +29,8 @@ public class playerMovement : MonoBehaviour
     public Animator anim;
 
     // Death
+    [Header("Death settings")]
+    public bool OldDeath = false;
     [HideInInspector]
     public Vector3 SpawnPos;
 
@@ -188,7 +190,15 @@ public class playerMovement : MonoBehaviour
     // DYING
     public void PlayerGotHit()
     {
-        //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        transform.position = SpawnPos;
+        if (OldDeath)
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+
+        }
+        else
+        {
+            transform.position = SpawnPos;
+
+        }
     }
 }
