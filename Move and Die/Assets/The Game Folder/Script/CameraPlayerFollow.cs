@@ -16,7 +16,7 @@ public class CameraPlayerFollow : MonoBehaviour
         Vector3 targetPos = new Vector3(
             Player.position.x + PlayerPos.x,
             transform.position.y,
-            -10);
+            PlayerPos.z);
 
         transform.position = Vector3.MoveTowards(
             transform.position,

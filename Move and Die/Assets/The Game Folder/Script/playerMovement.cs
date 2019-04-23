@@ -59,7 +59,7 @@ public class playerMovement : MonoBehaviour
         // Is Grounded
         RaycastHit hitGround;
         Vector3 RayStartPos = new Vector3(transform.position.x,
-            transform.position.y - 0f,
+            transform.position.y - 1f,
             transform.position.z);
 
         if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2), out hitGround, 0.6f, JumpableLayers))
