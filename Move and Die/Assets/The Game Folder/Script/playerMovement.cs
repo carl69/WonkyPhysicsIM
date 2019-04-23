@@ -122,7 +122,11 @@ public class playerMovement : MonoBehaviour
         // Crouch
         if (Input.GetButton("crouch"))
         {
-
+            anim.SetBool("Crouch", true);
+        }
+        else
+        {
+            anim.SetBool("Crouch", false);
         }
 
         //JUMPING 
