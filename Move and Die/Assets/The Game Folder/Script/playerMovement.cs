@@ -33,8 +33,6 @@ public class playerMovement : MonoBehaviour
 
     // Death
     [Header("Death settings")]
-    public bool OldDeath = false;
-    [HideInInspector]
     public Vector3 SpawnPos;
 
     // Crouch
@@ -234,16 +232,9 @@ public class playerMovement : MonoBehaviour
     // DYING
     public void PlayerGotHit()
     {
-        if (OldDeath)
-        {
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-
-        }
-        else
-        {
-            transform.position = SpawnPos;
-            RespawnPlatforms();
-        }
+        transform.position = SpawnPos;
+        RespawnPlatforms();
+        
     }
 
     // Colliders
