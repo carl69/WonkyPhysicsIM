@@ -28,11 +28,7 @@ public class DissapearingGround : MonoBehaviour
             //Fetch the Renderer from the GameObject
             //Renderer rend = GetComponent<Renderer>();
 
-            //Set the main Color of the Material to green
-            rend.material.shader = Shader.Find("_Color");
-            rend.material.SetColor("_Color", Color.green);
-
-            StartCoroutine(dissapearTimer());
+            blockAnimator.SetBool("Fall", true);
         }
     }
     public void DestroyBlock() { gameObject.SetActive(false); }
