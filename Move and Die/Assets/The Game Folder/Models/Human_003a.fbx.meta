@@ -115,6 +115,9 @@ ModelImporter:
     100218: Ulna.L.001
     100220: Ulna.R
     100222: Ulna.R.001
+    100224: CustomBone_Grip
+    100226: CustomBone_Hip
+    100228: CustomBone_HipRoot
     400000: //RootNode
     400002: Armature
     400004: Clavicle.L
@@ -227,20 +230,35 @@ ModelImporter:
     400218: Ulna.L.001
     400220: Ulna.R
     400222: Ulna.R.001
+    400224: CustomBone_Grip
+    400226: CustomBone_Hip
+    400228: CustomBone_HipRoot
     2100000: Human_Mesh
+    2100002: No Name
     2300000: //RootNode
     2300002: Human_Mesh
+    2300004: CustomBone_Grip
+    2300006: CustomBone_Hip
+    2300008: CustomBone_HipRoot
     3300000: //RootNode
     3300002: Human_Mesh
+    3300004: CustomBone_Grip
+    3300006: CustomBone_Hip
+    3300008: CustomBone_HipRoot
     4300000: Human_Mesh
+    4300002: CustomBone_HipRoot
+    4300004: CustomBone_Hip
+    4300006: CustomBone_Grip
     7400000: Armature|Combat_Attack_FerventAnger
     7400002: Armature|Combat_Attack_FerventAnger.001
     7400004: Armature|Movement_Running
     7400006: Armature|Movement_Falling
     7400008: Armature|Movement_Idle
     7400010: Armature|Movement_Jump01
+    7400012: Armature|Movement_SlideGround
     9500000: //RootNode
     13700000: Human_Mesh
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -358,6 +376,34 @@ ModelImporter:
       takeName: Armature|Movement_Jump01
       firstFrame: 0
       lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Movement_SlideGround
+      takeName: Armature|Movement_SlideGround
+      firstFrame: 0
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
