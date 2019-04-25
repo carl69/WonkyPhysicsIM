@@ -13,6 +13,8 @@ public class playerMovement : MonoBehaviour
     public float fallSpeed = 2;
     float curFallSpeed = 0;
     public LayerMask JumpableLayers;
+    public Collider JumpingCollider;
+
 
     // IsGrounded
     [Header("isGrounded Settings")]
@@ -23,6 +25,7 @@ public class playerMovement : MonoBehaviour
     // WALKING
     [Header("Walking Settings")]
     public float WalkingSpeed = 10;
+    public Collider WalkingCollider;
 
     // Animations
     [Header("Animation Settings")]
@@ -35,10 +38,13 @@ public class playerMovement : MonoBehaviour
     public Vector3 SpawnPos;
 
     // Crouch
+    [Header("SliderSettings")]
+    public Collider SlidingCollider;
     bool crouch = false;
 
     //Refrences
     Rigidbody RB;
+    Collider curActivCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +52,7 @@ public class playerMovement : MonoBehaviour
         SpawnPos = transform.position;
         RB = GetComponent<Rigidbody>();
         curFallSpeed = fallSpeed;// set the fall speed on the start incase the player starts in the air
+        curActivCollider = WalkingCollider;// set the activ collider
     }
 
     private void FixedUpdate()
@@ -74,6 +81,11 @@ public class playerMovement : MonoBehaviour
                     if (Input.GetButton("crouch"))
                     {
                         anim.SetTrigger("Slide");
+                        ChangeCollider(SlidingCollider);
+                    }
+                    else
+                    {
+                        ChangeCollider(WalkingCollider);
                     }
                 }
 
@@ -93,21 +105,7 @@ public class playerMovement : MonoBehaviour
             transform.position.y + 0.9f,
             transform.position.z);
 
-        //if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2), out hitGround, 1f, JumpableLayers))
-        //{
-        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-        //    isGrounded = true;
-        //    CurAirTimer = AirJumpTime + Time.time;
 
-        //}
-        //else if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2), out hitGround, 1f, JumpableLayers))
-        //{
-        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.right + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-        //    Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.left + Vector3.down * 2) * hitGround.distance, Color.yellow); // shows Debug
-        //    isGrounded = true;
-        //    CurAirTimer = AirJumpTime + Time.time;
-        //}
         // Checks under
         if (Physics.Raycast(RayStartPos, transform.TransformDirection( Vector3.down), out hitGround, 1f, JumpableLayers))
         {
@@ -143,7 +141,12 @@ public class playerMovement : MonoBehaviour
                     crouch = false;
                     anim.SetBool("Crouch", false);
                 }
+                if (!crouch)
+                {
+                    ChangeCollider(WalkingCollider);
+                }
             }
+
 
         }
 
@@ -152,8 +155,6 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         //JUMPING 
         if (Input.GetButtonDown("Jump"))
         {
@@ -190,6 +191,7 @@ public class playerMovement : MonoBehaviour
     {
         anim.SetTrigger("Jumping");
         RB.AddForce(Vector3.up * JumpSpeed,ForceMode.Impulse);
+        ChangeCollider(JumpingCollider);
     }
 
 
@@ -200,7 +202,6 @@ public class playerMovement : MonoBehaviour
         // checks if the player are moving down and stopping the jump here
         if (RB.velocity.y <= 0)
         {
-            print("Happen");
             curFallSpeed = fallSpeed;
 
             yield return null;
@@ -209,6 +210,7 @@ public class playerMovement : MonoBehaviour
         // checks if the player have reach their target hight
         if (curJumpHight >= transform.position.y)
         {
+            ChangeCollider(JumpingCollider);
             StartCoroutine("Jumping");
             yield return null;
         }
@@ -220,6 +222,8 @@ public class playerMovement : MonoBehaviour
                 RB.velocity.x,
                 0, // Sett the Y velocity to 0
                 RB.velocity.z);
+
+            ChangeCollider(WalkingCollider);
         }
         
     }
@@ -236,5 +240,17 @@ public class playerMovement : MonoBehaviour
             transform.position = SpawnPos;
 
         }
+    }
+
+    // Colliders
+    void ChangeCollider(Collider c)
+    {
+        if (curActivCollider != c)
+        {
+            curActivCollider.enabled = false;
+            curActivCollider = c;
+            curActivCollider.enabled = true;
+        }
+
     }
 }
