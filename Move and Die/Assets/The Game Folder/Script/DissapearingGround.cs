@@ -33,8 +33,7 @@ public class DissapearingGround : MonoBehaviour
             rend.material.SetColor("_Color", Color.green);
 
             StartCoroutine(dissapearTimer());
-
         }
     }
-    public void DestroyBlock() { Destroy(gameObject); }
+    public void DestroyBlock() { gameObject.SetActive(false); }
 }
