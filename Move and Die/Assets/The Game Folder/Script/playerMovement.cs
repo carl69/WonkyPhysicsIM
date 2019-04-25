@@ -51,9 +51,10 @@ public class playerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Walking
-        if (Input.GetAxisRaw("Horizontal") != 0)
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+        if (inputHorizontal != 0)
         {
-            float inputHorizontal = Input.GetAxisRaw("Horizontal");
+            
             Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
 
             RaycastHit hit;
@@ -67,13 +68,22 @@ public class playerMovement : MonoBehaviour
 
                 anim.SetFloat("WalkSpeed", inputHorizontal);
                 transform.position += Vector3.right * WalkingSpeed * inputHorizontal;// * Time.deltaTime;
+
+                if (Input.GetButton("crouch"))
+                {
+                    anim.SetTrigger("Slide");
+                }
             }
 
         }
         else
         {
             anim.SetFloat("WalkSpeed", 0);
+        }
 
+        if (!Input.GetButton("crouch"))
+        {
+            anim.SetBool("Slide", false);
         }
 
         // Is Grounded
@@ -103,6 +113,8 @@ public class playerMovement : MonoBehaviour
             Debug.DrawRay(RayStartPos, transform.TransformDirection( Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
             CurAirTimer = AirJumpTime + Time.time;
+
+
         }
         else
         {
@@ -114,20 +126,30 @@ public class playerMovement : MonoBehaviour
 
         }
         anim.SetBool("IsGrounded", isGrounded);
+
+        if (isGrounded)
+        {
+            if (inputHorizontal == 0)
+            {
+                // Crouch
+                if (Input.GetButton("crouch"))
+                {
+                    anim.SetBool("Crouch", true);
+                }
+                else
+                {
+                    anim.SetBool("Crouch", false);
+                }
+            }
+
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Crouch
-        if (Input.GetButton("crouch"))
-        {
-            anim.SetBool("Crouch", true);
-        }
-        else
-        {
-            anim.SetBool("Crouch", false);
-        }
+
 
         //JUMPING 
         if (Input.GetButtonDown("Jump"))
