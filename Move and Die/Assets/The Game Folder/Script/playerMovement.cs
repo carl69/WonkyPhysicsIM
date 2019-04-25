@@ -42,6 +42,10 @@ public class playerMovement : MonoBehaviour
     public Collider SlidingCollider;
     bool crouch = false;
 
+    // Falling blocks
+    [Header("BlockSettings")]
+    public List<AppearingGround> Blocks;
+
     //Refrences
     Rigidbody RB;
     Collider curActivCollider;
@@ -238,7 +242,7 @@ public class playerMovement : MonoBehaviour
         else
         {
             transform.position = SpawnPos;
-
+            RespawnPlatforms();
         }
     }
 
@@ -252,5 +256,14 @@ public class playerMovement : MonoBehaviour
             curActivCollider.enabled = true;
         }
 
+    }
+
+    // falling platforms
+    void RespawnPlatforms()
+    {
+        foreach (AppearingGround a in Blocks)
+        {
+            a.Appear();
+        }
     }
 }

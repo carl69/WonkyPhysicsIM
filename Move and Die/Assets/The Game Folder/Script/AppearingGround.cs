@@ -7,6 +7,12 @@ public class AppearingGround : MonoBehaviour
     public bool appear;
     public GameObject child;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<playerMovement>().Blocks.Add(this);
+    }
+
 
     public void Appear()
     {
