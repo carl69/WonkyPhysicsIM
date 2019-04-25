@@ -35,7 +35,7 @@ public class playerMovement : MonoBehaviour
     public Vector3 SpawnPos;
 
     // Crouch
-
+    bool crouch = false;
 
     //Refrences
     Rigidbody RB;
@@ -69,10 +69,14 @@ public class playerMovement : MonoBehaviour
                 anim.SetFloat("WalkSpeed", inputHorizontal);
                 transform.position += Vector3.right * WalkingSpeed * inputHorizontal;// * Time.deltaTime;
 
-                if (Input.GetButton("crouch"))
+                if (!crouch)
                 {
-                    anim.SetTrigger("Slide");
+                    if (Input.GetButton("crouch"))
+                    {
+                        anim.SetTrigger("Slide");
+                    }
                 }
+
             }
 
         }
@@ -81,10 +85,7 @@ public class playerMovement : MonoBehaviour
             anim.SetFloat("WalkSpeed", 0);
         }
 
-        if (!Input.GetButton("crouch"))
-        {
-            anim.SetBool("Slide", false);
-        }
+
 
         // Is Grounded
         RaycastHit hitGround;
@@ -134,10 +135,12 @@ public class playerMovement : MonoBehaviour
                 // Crouch
                 if (Input.GetButton("crouch"))
                 {
+                    crouch = true;
                     anim.SetBool("Crouch", true);
                 }
                 else
                 {
+                    crouch = false;
                     anim.SetBool("Crouch", false);
                 }
             }
