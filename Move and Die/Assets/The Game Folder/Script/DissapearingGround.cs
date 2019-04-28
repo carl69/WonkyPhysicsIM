@@ -31,5 +31,5 @@ public class DissapearingGround : MonoBehaviour
             blockAnimator.SetBool("Fall", true);
         }
     }
-    public void DestroyBlock() { dissapearing = false; gameObject.SetActive(false); }
+    public void DestroyBlock() { gameObject.GetComponent<Animator>().Play("Idle", -1, 0f); dissapearing = false; gameObject.SetActive(false); }
 }

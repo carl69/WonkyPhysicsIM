@@ -17,6 +17,7 @@ public class AppearingGround : MonoBehaviour
     public void Appear()
     {
         child = this.gameObject.transform.GetChild(0).gameObject;
+        child.GetComponent<DissapearingGround>().DestroyBlock();
         child.SetActive(true); child.GetComponent<Animator>().Play("Idle", -1, 0f);
     }
 }
