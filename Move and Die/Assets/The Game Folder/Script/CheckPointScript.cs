@@ -8,7 +8,7 @@ public class CheckPointScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 2);
+            Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 1);
 
             other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
         }
