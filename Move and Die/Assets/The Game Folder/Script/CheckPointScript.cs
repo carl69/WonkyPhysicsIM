@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class CheckPointScript : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<playerMovement>().SpawnPos = transform.position;
+            Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 2);
+
+            other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
         }
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "Player")
+    //    {
+    //        Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 2);
+
+    //        other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
+    //    }
+    //}
 }

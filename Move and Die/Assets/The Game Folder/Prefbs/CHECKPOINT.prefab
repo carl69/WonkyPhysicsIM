@@ -4711,7 +4711,7 @@ GameObject:
   - component: {fileID: 6466026807806342694}
   - component: {fileID: 6466026807806342693}
   - component: {fileID: 6466026807806342692}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CHECKPOINT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4786,10 +4786,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6466026807806342699}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 4, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6466026807806342692
 MonoBehaviour:
@@ -4862,6 +4862,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 60ef350bc8df8264da12b36df655b837, type: 2}
+    - target: {fileID: 2300026, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
 --- !u!4 &1558065598704193526 stripped
