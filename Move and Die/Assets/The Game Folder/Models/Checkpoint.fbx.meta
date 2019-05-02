@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: 2873f59ce9509f740bc8c32927094c11
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Backdrop
+    100002: //RootNode
+    100004: Checkpoint_Ball
+    100006: Checkpoint_Platform
+    100008: Checkpoint_SampleText
+    100010: Falling_Full_Large
+    100012: Falling_Full_Large.001
+    100014: Falling_Full_Small
+    100016: Falling_Left
+    100018: Falling_Mid
+    100020: Falling_Right
+    100022: Lava
+    100024: Lava_Holder
+    100026: Light
+    100028: Sun
+    400000: Backdrop
+    400002: //RootNode
+    400004: Checkpoint_Ball
+    400006: Checkpoint_Platform
+    400008: Checkpoint_SampleText
+    400010: Falling_Full_Large
+    400012: Falling_Full_Large.001
+    400014: Falling_Full_Small
+    400016: Falling_Left
+    400018: Falling_Mid
+    400020: Falling_Right
+    400022: Lava
+    400024: Lava_Holder
+    400026: Light
+    400028: Sun
+    2100000: Backdrop
+    2100002: light
+    2100004: Material.004
+    2100006: Material.002
+    2100008: Material
+    2100010: Material.007
+    2100012: Material.008
+    2100014: No Name
+    2100016: Material.009
+    2300000: Backdrop
+    2300002: Checkpoint_Ball
+    2300004: Checkpoint_Platform
+    2300006: Checkpoint_SampleText
+    2300008: Falling_Full_Large
+    2300010: Falling_Full_Large.001
+    2300012: Falling_Full_Small
+    2300014: Falling_Left
+    2300016: Falling_Mid
+    2300018: Falling_Right
+    2300020: Lava
+    2300022: Lava_Holder
+    2300024: Light
+    2300026: //RootNode
+    3300000: Backdrop
+    3300002: Checkpoint_Ball
+    3300004: Checkpoint_Platform
+    3300006: Checkpoint_SampleText
+    3300008: Falling_Full_Large
+    3300010: Falling_Full_Large.001
+    3300012: Falling_Full_Small
+    3300014: Falling_Left
+    3300016: Falling_Mid
+    3300018: Falling_Right
+    3300020: Lava
+    3300022: Lava_Holder
+    3300024: Light
+    3300026: //RootNode
+    4300000: Backdrop
+    4300002: Light
+    4300004: Lava_Holder
+    4300006: Lava
+    4300008: Falling_Full_Large
+    4300010: Falling_Left
+    4300012: Falling_Mid
+    4300014: Falling_Right
+    4300016: Checkpoint_Platform
+    4300018: Checkpoint_SampleText
+    4300020: Checkpoint_Ball
+    4300022: Falling_Full_Small
+    4300024: Falling_Full_Large.001
+    10800000: Sun
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
