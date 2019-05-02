@@ -5,6 +5,9 @@ using UnityEngine;
 public class bulletScript : MonoBehaviour
 {
     public float Speed;
+    [HideInInspector]
+    public GameManagerScript GMS;
+
 
     void Update()
     {

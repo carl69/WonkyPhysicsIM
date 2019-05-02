@@ -6,11 +6,8 @@ public class BulletSpawner : MonoBehaviour
 {
     public GameObject Bullets;
     public Transform Player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameManagerScript GMScript;
+
 
     // Update is called once per frame
     void Update()
