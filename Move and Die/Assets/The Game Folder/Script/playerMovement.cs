@@ -14,7 +14,7 @@ public class playerMovement : MonoBehaviour
     float curFallSpeed = 0;
     public LayerMask JumpableLayers;
     public Collider JumpingCollider;
-
+    int jumps = 0;
 
     // IsGrounded
     [Header("isGrounded Settings")]
@@ -114,8 +114,8 @@ public class playerMovement : MonoBehaviour
             Debug.DrawRay(RayStartPos, transform.TransformDirection( Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
             CurAirTimer = AirJumpTime + Time.time;
-
-
+            //Set Double Jumps
+            jumps = 1;
         }
         else
         {
@@ -157,15 +157,33 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonUp("Jump"))
+        {
+            curJumpHight = curJumpHight / 2;
+        }
+
         //JUMPING 
         if (Input.GetButtonDown("Jump"))
         {
             // check if you are grounded
             
-            if (isGrounded){
+            if (isGrounded || jumps >= 1)
+            {
+                RB.velocity = new Vector3(RB.velocity.x,0,0);
+
                 // no more extra airtime for you
                 CurAirTimer = 0;
                 isGrounded = false;
+
+                //Give doubleJump
+                if (jumps <= 0)
+                {
+                    
+                }
+                else // Remove the jumps
+                {
+                    jumps -= 1;
+                }
 
                 //setting maxHight
                 curJumpHight = JumpHight + transform.position.y;
@@ -178,10 +196,7 @@ public class playerMovement : MonoBehaviour
 
             }
         }
-        if (Input.GetButtonUp("Jump"))
-        {
-            curJumpHight = curJumpHight / 2;
-        }
+
 
         // FakeGravity
         RB.velocity -= new Vector3(0, Time.deltaTime * curFallSpeed, 0); //Placeholder
