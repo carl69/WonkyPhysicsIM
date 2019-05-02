@@ -17,6 +17,11 @@ public class BulletSpawner : MonoBehaviour
 
 
             GameObject bullet = Instantiate(Bullets);
+            // Bullet Var
+            bulletScript bs = bullet.GetComponent<bulletScript>();
+            bs.GMS = GMScript;
+            // add bullet to the list
+            GMScript.BS.Add(bs);
             // Bullet rot
             bullet.transform.eulerAngles = Vector3.down * 90;
             // Bullet Pos

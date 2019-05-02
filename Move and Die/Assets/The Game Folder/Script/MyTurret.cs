@@ -13,11 +13,15 @@ public class MyTurret : MonoBehaviour
     public int countdownToBulletTime;
     public int bulletTimer;
 
+    GameManagerScript GMScript;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectsWithTag("Player");
+        GMScript = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -31,12 +35,19 @@ public class MyTurret : MonoBehaviour
                 
             }
         }
-        if (Input.anyKeyDown)
+        if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch"))
         {
             countdownToBulletTime -= 1;
             if (countdownToBulletTime <= 0)
             {
-                GameObject.Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                // Bullet Var
+                bulletScript bs = SpawnedBullet.GetComponent<bulletScript>();
+                bs.GMS = GMScript;
+                // add bullet to the list
+                GMScript.BS.Add(bs);
+                // Bullet rot
+
                 countdownToBulletTime = bulletTimer;
             }
             

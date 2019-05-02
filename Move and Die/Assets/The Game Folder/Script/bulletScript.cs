@@ -21,6 +21,17 @@ public class bulletScript : MonoBehaviour
         {
             other.GetComponent<playerMovement>().PlayerGotHit();
         }
-        Destroy(this.gameObject);
+        else
+        {
+            GMS.BS.Remove(this); // happens if bullets hits walls or other things
+
+        }
+
+        DestroyBullet();
+    }
+
+    public void DestroyBullet()
+    {
+        Destroy(this.gameObject); // bullet gets destroyed
     }
 }

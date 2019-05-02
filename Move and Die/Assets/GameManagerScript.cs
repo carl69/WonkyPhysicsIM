@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    // Bullets
+    public List<bulletScript> BS = new List<bulletScript>();
+    public void playerDeath()
     {
-        
+        foreach (bulletScript bulletS in BS)
+        {
+            //BS.Remove(bulletS);
+
+            bulletS.DestroyBullet();
+        }
+        BS.Clear();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

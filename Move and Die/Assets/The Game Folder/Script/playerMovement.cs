@@ -47,10 +47,12 @@ public class playerMovement : MonoBehaviour
     //Refrences
     Rigidbody RB;
     Collider curActivCollider;
+    GameManagerScript gms;
 
     // Start is called before the first frame update
     void Start()
     {
+        gms = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
         SpawnPos = transform.position;
         RB = GetComponent<Rigidbody>();
         curFallSpeed = fallSpeed;// set the fall speed on the start incase the player starts in the air
@@ -248,8 +250,12 @@ public class playerMovement : MonoBehaviour
     public void PlayerGotHit()
     {
         transform.position = SpawnPos;
+
         RespawnPlatforms();
-        
+
+        gms.playerDeath();
+
+
     }
 
     // Colliders
