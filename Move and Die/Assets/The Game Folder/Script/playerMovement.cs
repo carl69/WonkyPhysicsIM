@@ -190,12 +190,22 @@ public class playerMovement : MonoBehaviour
                     jumps -= 1;
                 }
 
+                //setting maxHight
+                if (isGrounded)
+                {
+                    curJumpHight = JumpHight + transform.position.y;
+
+                }
+                else
+                {
+                    curJumpHight = JumpHight/2 + transform.position.y;
+
+                }
+
                 // no more extra airtime for you
                 CurAirTimer = 0;
                 isGrounded = false;
 
-                //setting maxHight
-                curJumpHight = JumpHight + transform.position.y;
 
                 JumpTakeOff();
 
