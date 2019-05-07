@@ -66,7 +66,7 @@ public class playerMovement : MonoBehaviour
         if (inputHorizontal != 0)
         {
             
-            Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);
+            Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
 
             RaycastHit hit;
             if (Physics.Raycast(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.6f, JumpableLayers))
@@ -87,7 +87,7 @@ public class playerMovement : MonoBehaviour
                         anim.SetTrigger("Slide");
                         ChangeCollider(SlidingCollider);
                     }
-                    else
+                    else if (isGrounded)
                     {
                         ChangeCollider(WalkingCollider);
                     }
@@ -209,8 +209,9 @@ public class playerMovement : MonoBehaviour
     void JumpTakeOff()
     {
         anim.SetTrigger("Jumping");
-        RB.AddForce(Vector3.up * JumpSpeed,ForceMode.Impulse);
         ChangeCollider(JumpingCollider);
+
+        RB.AddForce(Vector3.up * JumpSpeed,ForceMode.Impulse);
     }
 
 
@@ -242,7 +243,7 @@ public class playerMovement : MonoBehaviour
                 0, // Sett the Y velocity to 0
                 RB.velocity.z);
 
-            ChangeCollider(WalkingCollider);
+            //ChangeCollider(WalkingCollider);
         }
         
     }
