@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CheckPointScript : MonoBehaviour
 {
+    public GameObject ball;
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
@@ -11,6 +13,8 @@ public class CheckPointScript : MonoBehaviour
             Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 1);
 
             other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
+
+            ball.SetActive(true);
         }
     }
     //private void OnTriggerEnter(Collider other)

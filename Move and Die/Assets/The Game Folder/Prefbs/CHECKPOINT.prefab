@@ -4822,6 +4822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7df6d2699134884c9462cda71bcb305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ball: {fileID: 1558065598704030672}
 --- !u!1001 &1558065598704063860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4829,6 +4830,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6466026807806342688}
     m_Modifications:
+    - target: {fileID: 100002, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4893,10 +4902,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 60ef350bc8df8264da12b36df655b837, type: 2}
-    - target: {fileID: 100002, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
 --- !u!4 &1558065598704193526 stripped
