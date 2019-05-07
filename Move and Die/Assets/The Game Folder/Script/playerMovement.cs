@@ -102,18 +102,18 @@ public class playerMovement : MonoBehaviour
         }
 
 
-
         // Is Grounded
         RaycastHit hitGround;
         Vector3 RayStartPos = new Vector3(transform.position.x,
             transform.position.y + 0.9f,
             transform.position.z);
 
-
+        Debug.Log(Time.time);
+        Debug.Log(CurAirTimer);
         // Checks under
-        if (Physics.Raycast(RayStartPos, transform.TransformDirection( Vector3.down), out hitGround, 1f, JumpableLayers))
+        if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 1.5f, JumpableLayers))
         {
-            Debug.DrawRay(RayStartPos, transform.TransformDirection( Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
+            Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
             CurAirTimer = AirJumpTime + Time.time;
             //Set Double Jumps
@@ -128,6 +128,7 @@ public class playerMovement : MonoBehaviour
             }
 
         }
+
         anim.SetBool("IsGrounded", isGrounded);
 
         if (isGrounded)
@@ -159,6 +160,9 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+        // STOP JUMPING
         if (Input.GetButtonUp("Jump"))
         {
             curJumpHight = curJumpHight / 2;
@@ -168,24 +172,29 @@ public class playerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             // check if you are grounded
-            
+
+            if (isGrounded)
+            {
+                jumps = 1;
+            }
+
             if (isGrounded || jumps >= 1)
             {
                 RB.velocity = new Vector3(RB.velocity.x,0,0);
-
-                // no more extra airtime for you
-                CurAirTimer = 0;
-                isGrounded = false;
 
                 //Give doubleJump
                 if (jumps <= 0)
                 {
                     
                 }
-                else // Remove the jumps
+                else if (!isGrounded)// Remove the jumps
                 {
                     jumps -= 1;
                 }
+
+                // no more extra airtime for you
+                CurAirTimer = 0;
+                isGrounded = false;
 
                 //setting maxHight
                 curJumpHight = JumpHight + transform.position.y;
