@@ -108,8 +108,6 @@ public class playerMovement : MonoBehaviour
             transform.position.y + 0.9f,
             transform.position.z);
 
-        Debug.Log(Time.time);
-        Debug.Log(CurAirTimer);
         // Checks under
         if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 1.5f, JumpableLayers))
         {
