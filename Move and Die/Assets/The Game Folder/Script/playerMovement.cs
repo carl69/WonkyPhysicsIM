@@ -207,7 +207,6 @@ public class playerMovement : MonoBehaviour
                 }
                 else if (!isGrounded)// Remove the jumps
                 {
-                    anim.SetTrigger("DoubleJump");
                     jumps -= 1;
                 }
 
@@ -215,11 +214,13 @@ public class playerMovement : MonoBehaviour
                 if (isGrounded)
                 {
                     curJumpHight = JumpHight + transform.position.y;
+                    StartCoroutine("Jumping");
 
                 }
                 else
                 {
                     curJumpHight = JumpHight/2 + transform.position.y;
+                    anim.SetTrigger("DoubleJump");
 
                 }
 
@@ -230,7 +231,6 @@ public class playerMovement : MonoBehaviour
 
                 JumpTakeOff();
 
-                StartCoroutine("Jumping");
 
                 curFallSpeed = 0;
 

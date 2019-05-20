@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     
-
+    public void QUITDAGAME()
+    {
+        Application.Quit();
+    }
 
 
    public void EzLevel()
