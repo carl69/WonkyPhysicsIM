@@ -172,7 +172,7 @@ public class playerMovement : MonoBehaviour
 
             if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop, JumpableLayers))
             {
-                transform.position = hitGround.point;
+                transform.position = hitGround.point + new Vector3(0, 0.5f,0);
             }
             else
             {
@@ -214,13 +214,13 @@ public class playerMovement : MonoBehaviour
                 if (isGrounded)
                 {
                     curJumpHight = JumpHight + transform.position.y;
-                    StartCoroutine("Jumping");
+                    anim.SetTrigger("DoubleJump");
 
                 }
                 else
                 {
                     curJumpHight = JumpHight/2 + transform.position.y;
-                    anim.SetTrigger("DoubleJump");
+                    anim.SetTrigger("Jumping");
 
                 }
 
@@ -231,6 +231,7 @@ public class playerMovement : MonoBehaviour
 
                 JumpTakeOff();
 
+                StartCoroutine("Jumping");
 
                 curFallSpeed = 0;
 
@@ -246,7 +247,6 @@ public class playerMovement : MonoBehaviour
     // the jump start
     void JumpTakeOff()
     {
-        anim.SetTrigger("Jumping");
         ChangeCollider(JumpingCollider);
 
         RB.AddForce(Vector3.up * JumpSpeed,ForceMode.Impulse);
