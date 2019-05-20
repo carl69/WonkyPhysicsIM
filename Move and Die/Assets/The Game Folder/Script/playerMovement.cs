@@ -207,6 +207,7 @@ public class playerMovement : MonoBehaviour
                 }
                 else if (!isGrounded)// Remove the jumps
                 {
+                    anim.SetTrigger("DoubleJump");
                     jumps -= 1;
                 }
 
