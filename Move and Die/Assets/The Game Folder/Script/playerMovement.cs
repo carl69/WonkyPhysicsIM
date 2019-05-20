@@ -214,13 +214,14 @@ public class playerMovement : MonoBehaviour
                 if (isGrounded)
                 {
                     curJumpHight = JumpHight + transform.position.y;
-                    anim.SetTrigger("DoubleJump");
+                    anim.SetTrigger("Jumping");
 
                 }
                 else
                 {
                     curJumpHight = JumpHight/2 + transform.position.y;
-                    anim.SetTrigger("Jumping");
+                    anim.SetTrigger("DoubleJump");
+
 
                 }
 
