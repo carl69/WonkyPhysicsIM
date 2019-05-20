@@ -158,7 +158,23 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // teleport down
+        if (Input.GetButtonDown("crouch"))
+        {
+            RaycastHit hitGround;
+            Vector3 RayStartPos = new Vector3(transform.position.x,
+                transform.position.y + 0.9f,
+                transform.position.z);
 
+            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 2f, JumpableLayers))
+            {
+                transform.position = hitGround.point;
+            }
+            else
+            {
+                transform.position += Vector3.down * 2;
+            }
+        }
 
         // STOP JUMPING
         if (Input.GetButtonUp("Jump"))
