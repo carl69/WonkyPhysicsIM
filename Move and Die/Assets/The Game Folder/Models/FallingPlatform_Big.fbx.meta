@@ -1,60 +1,40 @@
 fileFormatVersion: 2
-guid: 2873f59ce9509f740bc8c32927094c11
+guid: a16faa65b7cfe694a874052075943e29
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: Backdrop
-    100002: //RootNode
-    100004: Checkpoint_Ball
-    100006: Checkpoint_Platform
-    100008: Checkpoint_SampleText
+    100002: Checkpoint_Ball
+    100004: Checkpoint_Platform
+    100006: Checkpoint_SampleText
+    100008: Empty
     100010: Falling_Full_Large
     100012: Falling_Full_Large.001
     100014: Falling_Full_Small
     100016: Falling_Left
     100018: Falling_Mid
     100020: Falling_Right
-    100022: Lava
-    100024: Lava_Holder
-    100026: Light
-    100028: Sun
-    100030: Empty
-    100032: Falling_Full_01
-    100034: Falling_Full_02
-    100036: Falling_Full_03
-    100038: Falling_Full_04
-    100040: Falling_Full_05
-    100042: Falling_Full_06
-    100044: Falling_Full_07
-    100046: Falling_Full_08
-    100048: Falling_Full_09
-    100050: Falling_Full_10
+    100022: //RootNode
+    100024: Lava
+    100026: Lava_Holder
+    100028: Light
+    100030: Sun
     400000: Backdrop
-    400002: //RootNode
-    400004: Checkpoint_Ball
-    400006: Checkpoint_Platform
-    400008: Checkpoint_SampleText
+    400002: Checkpoint_Ball
+    400004: Checkpoint_Platform
+    400006: Checkpoint_SampleText
+    400008: Empty
     400010: Falling_Full_Large
     400012: Falling_Full_Large.001
     400014: Falling_Full_Small
     400016: Falling_Left
     400018: Falling_Mid
     400020: Falling_Right
-    400022: Lava
-    400024: Lava_Holder
-    400026: Light
-    400028: Sun
-    400030: Empty
-    400032: Falling_Full_01
-    400034: Falling_Full_02
-    400036: Falling_Full_03
-    400038: Falling_Full_04
-    400040: Falling_Full_05
-    400042: Falling_Full_06
-    400044: Falling_Full_07
-    400046: Falling_Full_08
-    400048: Falling_Full_09
-    400050: Falling_Full_10
+    400022: //RootNode
+    400024: Lava
+    400026: Lava_Holder
+    400028: Light
+    400030: Sun
     2100000: Backdrop
     2100002: light
     2100004: Material.004
@@ -77,17 +57,6 @@ ModelImporter:
     2300020: Lava
     2300022: Lava_Holder
     2300024: Light
-    2300026: //RootNode
-    2300028: Falling_Full_01
-    2300030: Falling_Full_02
-    2300032: Falling_Full_03
-    2300034: Falling_Full_04
-    2300036: Falling_Full_05
-    2300038: Falling_Full_06
-    2300040: Falling_Full_07
-    2300042: Falling_Full_08
-    2300044: Falling_Full_09
-    2300046: Falling_Full_10
     3300000: Backdrop
     3300002: Checkpoint_Ball
     3300004: Checkpoint_Platform
@@ -101,17 +70,6 @@ ModelImporter:
     3300020: Lava
     3300022: Lava_Holder
     3300024: Light
-    3300026: //RootNode
-    3300028: Falling_Full_01
-    3300030: Falling_Full_02
-    3300032: Falling_Full_03
-    3300034: Falling_Full_04
-    3300036: Falling_Full_05
-    3300038: Falling_Full_06
-    3300040: Falling_Full_07
-    3300042: Falling_Full_08
-    3300044: Falling_Full_09
-    3300046: Falling_Full_10
     4300000: Backdrop
     4300002: Light
     4300004: Lava_Holder
@@ -120,21 +78,11 @@ ModelImporter:
     4300010: Falling_Left
     4300012: Falling_Mid
     4300014: Falling_Right
-    4300016: Checkpoint_Platform
-    4300018: Checkpoint_SampleText
-    4300020: Checkpoint_Ball
-    4300022: Falling_Full_Small
-    4300024: Falling_Full_Large.001
-    4300026: Falling_Full_03
-    4300028: Falling_Full_04
-    4300030: Falling_Full_05
-    4300032: Falling_Full_06
-    4300034: Falling_Full_07
-    4300036: Falling_Full_08
-    4300038: Falling_Full_09
-    4300040: Falling_Full_10
-    4300042: Falling_Full_02
-    4300044: Falling_Full_01
+    4300016: Falling_Full_Small
+    4300018: Falling_Full_Large.001
+    4300020: Checkpoint_Platform
+    4300022: Checkpoint_SampleText
+    4300024: Checkpoint_Ball
     10800000: Sun
   externalObjects: {}
   materials:
