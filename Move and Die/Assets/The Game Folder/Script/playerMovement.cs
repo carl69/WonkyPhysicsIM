@@ -40,6 +40,10 @@ public class playerMovement : MonoBehaviour
     public Collider SlidingCollider;
     bool crouch = false;
 
+    // Air Drop
+    [Header("Air Drop")]
+    public float LengthOfDrop = 2;
+
     // Falling blocks
     [Header("BlockSettings")]
     public List<AppearingGround> Blocks;
@@ -166,13 +170,13 @@ public class playerMovement : MonoBehaviour
                 transform.position.y + 0.9f,
                 transform.position.z);
 
-            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 2f, JumpableLayers))
+            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop, JumpableLayers))
             {
                 transform.position = hitGround.point;
             }
             else
             {
-                transform.position += Vector3.down * 2;
+                transform.position += Vector3.down * LengthOfDrop;
             }
         }
 
