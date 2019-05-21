@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody>();
     }
 
-    bool falling = false;
 
     private void FixedUpdate(){
 

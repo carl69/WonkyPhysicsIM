@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public int GameMod = 1;
+
 
     // Bullets
     public List<bulletScript> BS = new List<bulletScript>();
@@ -17,5 +19,20 @@ public class GameManagerScript : MonoBehaviour
         }
         BS.Clear();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("Gamemode 1");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Debug.Log("Gamemode 2");
+        }
+
+    }
+
 
 }

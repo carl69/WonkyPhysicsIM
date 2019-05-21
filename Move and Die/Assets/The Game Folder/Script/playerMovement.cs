@@ -86,9 +86,13 @@ public class playerMovement : MonoBehaviour
 
                 if (!crouch)
                 {
-                    if (Input.GetButton("crouch"))
+                    if (Input.GetButtonDown("crouch"))
                     {
                         anim.SetTrigger("Slide");
+
+                    }
+                    if (Input.GetButton("crouch"))
+                    {
                         ChangeCollider(SlidingCollider);
                     }
                     else if (isGrounded)
@@ -170,9 +174,9 @@ public class playerMovement : MonoBehaviour
                 transform.position.y + 0.9f,
                 transform.position.z);
 
-            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop, JumpableLayers))
+            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +1, JumpableLayers))
             {
-                transform.position = hitGround.point + new Vector3(0, 0.5f,0);
+                transform.position = hitGround.point + new Vector3(0, 0f,0);
             }
             else
             {
