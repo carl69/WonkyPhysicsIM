@@ -26,6 +26,16 @@ ModelImporter:
     100040: Falling_Full_08
     100042: Falling_Full_09
     100044: Falling_Full_10
+    100046: Falling_Full_01_Frame
+    100048: Falling_Full_02_Frame
+    100050: Falling_Full_03_Frame
+    100052: Falling_Full_04_Frame
+    100054: Falling_Full_05_Frame
+    100056: Falling_Full_06_Frame
+    100058: Falling_Full_07_Frame
+    100060: Falling_Full_08_Frame
+    100062: Falling_Full_09_Frame
+    100064: Falling_Full_10_Frame
     400000: //RootNode
     400002: Checkpoint_Ball
     400004: Checkpoint_Platform
@@ -49,6 +59,16 @@ ModelImporter:
     400040: Falling_Full_08
     400042: Falling_Full_09
     400044: Falling_Full_10
+    400046: Falling_Full_01_Frame
+    400048: Falling_Full_02_Frame
+    400050: Falling_Full_03_Frame
+    400052: Falling_Full_04_Frame
+    400054: Falling_Full_05_Frame
+    400056: Falling_Full_06_Frame
+    400058: Falling_Full_07_Frame
+    400060: Falling_Full_08_Frame
+    400062: Falling_Full_09_Frame
+    400064: Falling_Full_10_Frame
     2100000: Material.004
     2100002: Material.002
     2100004: Material
@@ -56,6 +76,8 @@ ModelImporter:
     2100008: Material.008
     2100010: No Name
     2100012: Material.009
+    2100014: Fill
+    2100016: Frame
     2300000: Checkpoint_Ball
     2300002: Checkpoint_Platform
     2300004: Checkpoint_SampleText
@@ -77,6 +99,16 @@ ModelImporter:
     2300036: Falling_Full_08
     2300038: Falling_Full_09
     2300040: Falling_Full_10
+    2300042: Falling_Full_01_Frame
+    2300044: Falling_Full_02_Frame
+    2300046: Falling_Full_03_Frame
+    2300048: Falling_Full_04_Frame
+    2300050: Falling_Full_05_Frame
+    2300052: Falling_Full_06_Frame
+    2300054: Falling_Full_07_Frame
+    2300056: Falling_Full_08_Frame
+    2300058: Falling_Full_09_Frame
+    2300060: Falling_Full_10_Frame
     3300000: Checkpoint_Ball
     3300002: Checkpoint_Platform
     3300004: Checkpoint_SampleText
@@ -98,6 +130,16 @@ ModelImporter:
     3300036: Falling_Full_08
     3300038: Falling_Full_09
     3300040: Falling_Full_10
+    3300042: Falling_Full_01_Frame
+    3300044: Falling_Full_02_Frame
+    3300046: Falling_Full_03_Frame
+    3300048: Falling_Full_04_Frame
+    3300050: Falling_Full_05_Frame
+    3300052: Falling_Full_06_Frame
+    3300054: Falling_Full_07_Frame
+    3300056: Falling_Full_08_Frame
+    3300058: Falling_Full_09_Frame
+    3300060: Falling_Full_10_Frame
     4300000: Lava_Holder
     4300002: Lava
     4300004: Falling_Left
@@ -119,6 +161,16 @@ ModelImporter:
     4300036: Falling_Full_10
     4300038: Falling_Full_02
     4300040: Falling_Full_01
+    4300042: Falling_Full_03_Frame
+    4300044: Falling_Full_04_Frame
+    4300046: Falling_Full_05_Frame
+    4300048: Falling_Full_06_Frame
+    4300050: Falling_Full_07_Frame
+    4300052: Falling_Full_08_Frame
+    4300054: Falling_Full_09_Frame
+    4300056: Falling_Full_10_Frame
+    4300058: Falling_Full_02_Frame
+    4300060: Falling_Full_01_Frame
   externalObjects: {}
   materials:
     importMaterials: 1
