@@ -21,7 +21,9 @@ public class playerMovement : MonoBehaviour
     public bool isGrounded = false;
     float AirJumpTime = 0.2f;
     float CurAirTimer = 0;
-
+    bool landed = false;
+    public GameObject LandingPartical;
+    public Transform LandingParticalSpawn;
     // WALKING
     [Header("Walking Settings")]
     public float WalkingSpeed = 10;
@@ -124,9 +126,23 @@ public class playerMovement : MonoBehaviour
             CurAirTimer = AirJumpTime + Time.time;
             //Set Double Jumps
             jumps = 1;
+
+            // LANDED
+            if (landed == false)
+            {
+                landed = true;
+                GameObject landingpartical = Instantiate(LandingPartical);
+                landingpartical.transform.position = LandingParticalSpawn.position;
+            }
         }
         else
         {
+            // NO LONGER LANDED
+            if (landed == true)
+            {
+                landed = false;
+            }
+
             if (CurAirTimer <= Time.time)
             {
                 // Stop being grounded
@@ -134,6 +150,8 @@ public class playerMovement : MonoBehaviour
             }
 
         }
+
+
 
         anim.SetBool("IsGrounded", isGrounded);
 

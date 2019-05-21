@@ -654,6 +654,15 @@ PrefabInstance:
       propertyPath: SlidingCollider
       value: 
       objectReference: {fileID: 9164788334055742090}
+    - target: {fileID: 264650432, guid: bf27818e5509810429e1d7e897355300, type: 3}
+      propertyPath: LandingParticalSpawn
+      value: 
+      objectReference: {fileID: 6394890260778691451}
+    - target: {fileID: 264650432, guid: bf27818e5509810429e1d7e897355300, type: 3}
+      propertyPath: LandingPartical
+      value: 
+      objectReference: {fileID: 8847000887341262227, guid: 292b4acfcb1365d468132b74b8a1e932,
+        type: 3}
     - target: {fileID: 1992363086812224749, guid: bf27818e5509810429e1d7e897355300,
         type: 3}
       propertyPath: m_Radius
