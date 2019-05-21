@@ -171,18 +171,22 @@ public class playerMovement : MonoBehaviour
         {
             RaycastHit hitGround;
             Vector3 RayStartPos = new Vector3(transform.position.x,
-                transform.position.y + 0.9f,
+                transform.position.y + 1f,
                 transform.position.z);
 
             curJumpHight = 0; // STOPS THE JUMP
+            ChangeCollider(WalkingCollider); // change colliders
 
-            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +1, JumpableLayers))
+            if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +2f, JumpableLayers))
             {
-                transform.position = hitGround.point + new Vector3(0, 0f,0);
+                RB.velocity = new Vector3(RB.velocity.x, 0, 0);
+                transform.position = hitGround.point + new Vector3(0, 0, 0);
+                Debug.Log("Ground");
             }
             else
             {
                 transform.position += Vector3.down * LengthOfDrop;
+                Debug.Log("AIR");
             }
         }
 
@@ -288,7 +292,7 @@ public class playerMovement : MonoBehaviour
                 0, // Sett the Y velocity to 0
                 RB.velocity.z);
 
-            //ChangeCollider(WalkingCollider);
+            ChangeCollider(WalkingCollider);
         }
         
     }
