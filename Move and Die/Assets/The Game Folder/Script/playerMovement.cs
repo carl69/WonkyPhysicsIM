@@ -37,10 +37,17 @@ public class playerMovement : MonoBehaviour
     [Header("Death settings")]
     public Vector3 SpawnPos;
 
+    // RESPAWN
+    public float RespawnTime = 1f;
+    float CurRespawnTime = 0;
+
     // Crouch
     [Header("SliderSettings")]
     public Collider SlidingCollider;
     bool crouch = false;
+
+    public GameObject SlidingPartical;
+    GameObject curSlidingPartical;
 
     // Air Drop
     [Header("Air Drop")]
@@ -69,7 +76,7 @@ public class playerMovement : MonoBehaviour
     {
         //Walking
         float inputHorizontal = Input.GetAxisRaw("Horizontal");
-        if (inputHorizontal != 0)
+        if (inputHorizontal != 0 && CurRespawnTime <= 0)
         {
             
             Vector3 rayStartPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
@@ -102,12 +109,11 @@ public class playerMovement : MonoBehaviour
                         ChangeCollider(WalkingCollider);
                     }
                 }
-
             }
-
         }
         else
         {
+            CurRespawnTime -= Time.deltaTime;
             anim.SetFloat("WalkSpeed", 0);
         }
 
@@ -175,10 +181,7 @@ public class playerMovement : MonoBehaviour
                     ChangeCollider(WalkingCollider);
                 }
             }
-
-
         }
-
     }
 
     // Update is called once per frame
@@ -317,6 +320,7 @@ public class playerMovement : MonoBehaviour
     // DYING
     public void PlayerGotHit()
     {
+        CurRespawnTime = RespawnTime;
         transform.position = SpawnPos;
         RB.velocity = new Vector3(0, 0, 0);
         RespawnPlatforms();
