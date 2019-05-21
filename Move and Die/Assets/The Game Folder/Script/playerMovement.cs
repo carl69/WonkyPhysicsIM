@@ -318,7 +318,7 @@ public class playerMovement : MonoBehaviour
     public void PlayerGotHit()
     {
         transform.position = SpawnPos;
-
+        RB.velocity = new Vector3(0, 0, 0);
         RespawnPlatforms();
 
         gms.playerDeath();
