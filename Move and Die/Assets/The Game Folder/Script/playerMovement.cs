@@ -174,6 +174,8 @@ public class playerMovement : MonoBehaviour
                 transform.position.y + 0.9f,
                 transform.position.z);
 
+            curJumpHight = 0; // STOPS THE JUMP
+
             if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +1, JumpableLayers))
             {
                 transform.position = hitGround.point + new Vector3(0, 0f,0);

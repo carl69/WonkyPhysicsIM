@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EzEndGameButton : MonoBehaviour
 {
-    public bool MainMenu = false; 
+    public bool MainMenu = false;
+    public GameObject Menu;
 
     // Update is called once per frame
     void Update()
@@ -20,9 +21,30 @@ public class EzEndGameButton : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(0);
+                if (Menu.activeInHierarchy == true)
+                {
+                    Menu.SetActive(false);
+                }
+                else
+                {
+                    Menu.SetActive(true);
+                }
             }
             
         }
     }
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene(0);
+
+    }
+    public void BackToGame()
+    {
+        Menu.SetActive(false);
+    }
+    public void EndGame()
+    {
+        Application.Quit();
+    }
+
 }
