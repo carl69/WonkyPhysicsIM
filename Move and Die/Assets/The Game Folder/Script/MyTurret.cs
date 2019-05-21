@@ -10,16 +10,20 @@ public class MyTurret : MonoBehaviour
     public GameObject bulletSpawner;
     public GameObject bullet;
 
-    public int countdownToBulletTime;
+    public float countdownToBulletTime;
     public int bulletTimer;
 
     GameManagerScript GMScript;
+    public int GameMod = 1;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameMod = PlayerPrefs.GetInt("GameMode", 1);
+
         target = GameObject.FindGameObjectsWithTag("Player");
         GMScript = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
+        GMScript.Turrets.Add(this);
     }
 
     // Update is called once per frame
@@ -35,9 +39,29 @@ public class MyTurret : MonoBehaviour
                 
             }
         }
-        if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch"))
+        if (GameMod == 1)
         {
-            countdownToBulletTime -= 1;
+            if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch"))
+            {
+                countdownToBulletTime -= 1;
+                if (countdownToBulletTime <= 0)
+                {
+                    GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+                    // Bullet Var
+                    bulletScript bs = SpawnedBullet.GetComponent<bulletScript>();
+                    bs.GMS = GMScript;
+                    // add bullet to the list
+                    GMScript.BS.Add(bs);
+                    // Bullet rot
+
+                    countdownToBulletTime = bulletTimer;
+                }
+
+            }
+        }
+        else if (GameMod == 2)
+        {
+            countdownToBulletTime -= 1 *Time.deltaTime;
             if (countdownToBulletTime <= 0)
             {
                 GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
@@ -50,8 +74,8 @@ public class MyTurret : MonoBehaviour
 
                 countdownToBulletTime = bulletTimer;
             }
-            
         }
+
     }
     void lookAtPlayer()
     {
