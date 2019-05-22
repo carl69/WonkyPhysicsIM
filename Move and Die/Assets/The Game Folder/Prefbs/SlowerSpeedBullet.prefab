@@ -4805,7 +4805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 399791dca889c914ebdde28e054d7f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 15
+  Speed: 7.5
+  GMS: {fileID: 0}
 --- !u!54 &7249912936731586136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4829,6 +4830,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7249912936731586139}
     m_Modifications:
+    - target: {fileID: 6931874808437237234, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+        type: 3}
+      propertyPath: m_Name
+      value: Cool Effect
+      objectReference: {fileID: 0}
     - target: {fileID: 6931874808437237233, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4884,15 +4890,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6931874808437237234, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+    - target: {fileID: 528446583125354504, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
-      propertyPath: m_Name
-      value: Cool Effect
+      propertyPath: m_LocalPosition.y
+      value: -0.03
       objectReference: {fileID: 0}
-    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+    - target: {fileID: 528446583125354504, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6931874808437237232, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
@@ -4909,15 +4915,20 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[0].m_Value.z
       value: 0.35011867
       objectReference: {fileID: 0}
-    - target: {fileID: 528446583125354504, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
+      propertyPath: m_Materials.Array.size
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 528446583125354504, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3233298390566516430, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
