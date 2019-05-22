@@ -187,6 +187,12 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // STARTS WALKING
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        {
+            CurRespawnTime = 0;
+        }
+
         // teleport down
         if (Input.GetButtonDown("crouch"))
         {
