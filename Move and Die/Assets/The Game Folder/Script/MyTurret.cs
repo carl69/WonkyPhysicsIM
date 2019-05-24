@@ -41,7 +41,7 @@ public class MyTurret : MonoBehaviour
         }
         if (GameMod == 1)
         {
-            if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch"))
+            if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
             {
                 countdownToBulletTime -= 1;
                 if (countdownToBulletTime <= 0)

@@ -12,7 +12,7 @@ public class BulletSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch"))
+        if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
         {
 
 
