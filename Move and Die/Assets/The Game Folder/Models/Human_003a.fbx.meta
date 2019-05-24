@@ -257,6 +257,7 @@ ModelImporter:
     7400010: Armature|Movement_Jump01
     7400012: Armature|Movement_SlideGround
     7400014: Armature|Movement_JumpDouble
+    7400016: Armature|Movement_Death01
     9500000: //RootNode
     13700000: Human_Mesh
     2186277476908879412: ImportLogs
@@ -433,6 +434,34 @@ ModelImporter:
       takeName: Armature|Movement_JumpDouble
       firstFrame: 0
       lastFrame: 12
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Movement_Death01
+      takeName: Armature|Movement_Death01
+      firstFrame: 0
+      lastFrame: 27
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
