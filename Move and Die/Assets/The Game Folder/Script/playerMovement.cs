@@ -355,16 +355,33 @@ public class playerMovement : MonoBehaviour
         }
         
     }
+
+    bool died = false;
     // DYING
     public void PlayerGotHit()
     {
-        CurRespawnTime = RespawnTime;
+        if (died == false)
+        {
+            CurRespawnTime = RespawnTime;
+            RB.velocity = new Vector3(0, 0, 0);
+            RespawnPlatforms();
+
+            gms.playerDeath();
+
+            StartCoroutine("PlayerDyingWaiting");
+        }
+
+
+        died = true;
+    }
+
+    IEnumerator PlayerDyingWaiting()
+    {
+        anim.SetTrigger("Death");
+        yield return new WaitForSeconds(1);
+        anim.SetTrigger("Respawn");
         transform.position = SpawnPos;
-        RB.velocity = new Vector3(0, 0, 0);
-        RespawnPlatforms();
-
-        gms.playerDeath();
-
+        died = false;
 
     }
 
