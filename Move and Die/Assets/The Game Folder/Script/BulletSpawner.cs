@@ -26,7 +26,7 @@ public class BulletSpawner : MonoBehaviour
             bullet.transform.eulerAngles = Vector3.down * 90;
             // Bullet Pos
             bullet.transform.position = new Vector3(
-                transform.position.x + 20,
+                transform.position.x + 30,
                 Player.position.y + Random.Range(0,4),
                 0);
         }
