@@ -54,11 +54,17 @@ public class playerMovement : MonoBehaviour
     public float LengthOfDrop = 2;
 
     // DASH
+    [Header("Dash")]
+    public int DashCount = 1;
+    int curDashCount = 1;
     float LengthOfDash = 5;
 
     // Falling blocks
     [Header("BlockSettings")]
     public List<AppearingGround> Blocks;
+
+    // Dir
+    int PlayerDir = 1;
 
     //Refrences
     Rigidbody RB;
@@ -138,6 +144,8 @@ public class playerMovement : MonoBehaviour
             CurAirTimer = AirJumpTime + Time.time;
             //Set Double Jumps
             jumps = 1;
+            //Set Dash
+            curDashCount = DashCount;
 
             // LANDED
             if (landed == false)
@@ -194,8 +202,10 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // DASH
-        if (Input.GetButtonDown("Dash"))
+        if (Input.GetButtonDown("Dash") && curDashCount >= 1)
         {
+            curDashCount -= 1;
+
             if (Input.GetAxisRaw("Horizontal") != 0)
             {
                 Vector3 pos = transform.position;
