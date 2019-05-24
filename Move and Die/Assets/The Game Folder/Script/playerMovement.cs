@@ -55,6 +55,7 @@ public class playerMovement : MonoBehaviour
 
     // DASH
     [Header("Dash")]
+    public bool PlayerDashUnlock = true;
     public int DashCount = 1;
     int curDashCount = 1;
     float LengthOfDash = 5;
@@ -209,7 +210,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // DASH
-        if (Input.GetButtonDown("Dash") && curDashCount >= 1)
+        if (Input.GetButtonDown("Dash") && curDashCount >= 1 && PlayerDashUnlock)
         {
             // COUNTING DOWN
             curDashCount -= 1;
