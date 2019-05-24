@@ -36,6 +36,7 @@ public class playerMovement : MonoBehaviour
     // Death
     [Header("Death settings")]
     public Vector3 SpawnPos;
+    public bool died = false;
 
     // RESPAWN
     public float RespawnTime = 1f;
@@ -356,23 +357,19 @@ public class playerMovement : MonoBehaviour
         
     }
 
-    bool died = false;
     // DYING
     public void PlayerGotHit()
     {
         if (died == false)
         {
+            died = true;
             CurRespawnTime = RespawnTime;
             RB.velocity = new Vector3(0, 0, 0);
-            RespawnPlatforms();
 
             gms.playerDeath();
 
             StartCoroutine("PlayerDyingWaiting");
-        }
-
-
-        died = true;
+        }       
     }
 
     IEnumerator PlayerDyingWaiting()
@@ -381,6 +378,8 @@ public class playerMovement : MonoBehaviour
         yield return new WaitForSeconds(1);
         anim.SetTrigger("Respawn");
         transform.position = SpawnPos;
+        RespawnPlatforms();
+
         died = false;
 
     }
