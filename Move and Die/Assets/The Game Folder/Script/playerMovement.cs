@@ -84,9 +84,10 @@ public class playerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         // DIRection
-        if (Input.GetAxisRaw("Horizontal") != 0)
+        if (Input.GetAxisRaw("Horizontal") != 0 && PlayerDir != Input.GetAxisRaw("Horizontal"))
         {
             PlayerDir = Input.GetAxisRaw("Horizontal");
+            anim.SetFloat("PlayerDir", PlayerDir);
         }
 
         //Walking
