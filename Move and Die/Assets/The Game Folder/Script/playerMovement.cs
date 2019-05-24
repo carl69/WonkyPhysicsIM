@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
     public bool died = false;
 
     // RESPAWN
-    public float RespawnTime = 1f;
+    public float RespawnTime = 2f;
     float CurRespawnTime = 0;
 
     // Crouch
@@ -189,7 +189,7 @@ public class playerMovement : MonoBehaviour
             if (inputHorizontal == 0)
             {
                 // Crouch
-                if (Input.GetButton("crouch"))
+                if (Input.GetButton("crouch") && CurRespawnTime <= 0)
                 {
                     crouch = true;
                     anim.SetBool("Crouch", true);
@@ -211,7 +211,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // DASH
-        if (Input.GetButtonDown("Dash") && curDashCount >= 1 && PlayerDashUnlock)
+        if (Input.GetButtonDown("Dash") && curDashCount >= 1 && PlayerDashUnlock && CurRespawnTime <= 0)
         {
             // COUNTING DOWN
             curDashCount -= 1;
@@ -227,7 +227,7 @@ public class playerMovement : MonoBehaviour
         }
 
         // teleport down
-        if (Input.GetButtonDown("crouch"))
+        if (Input.GetButtonDown("crouch") && CurRespawnTime <= 0)
         {
             RaycastHit hitGround;
             Vector3 RayStartPos = new Vector3(transform.position.x,
@@ -251,13 +251,13 @@ public class playerMovement : MonoBehaviour
         }
 
         // STOP JUMPING
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump") && CurRespawnTime <= 0)
         {
             curJumpHight = curJumpHight / 2;
         }
 
         //JUMPING 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && CurRespawnTime <= 0)
         {
             // check if you are grounded
 

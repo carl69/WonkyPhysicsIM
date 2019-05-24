@@ -660,6 +660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2104547485358836039}
     - target: {fileID: 264650432, guid: bf27818e5509810429e1d7e897355300, type: 3}
+      propertyPath: RespawnTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 264650432, guid: bf27818e5509810429e1d7e897355300, type: 3}
       propertyPath: SlidingCollider
       value: 
       objectReference: {fileID: 9164788334055742090}
