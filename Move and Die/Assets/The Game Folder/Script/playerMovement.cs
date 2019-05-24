@@ -234,7 +234,7 @@ public class playerMovement : MonoBehaviour
                 transform.position.z);
 
             curJumpHight = 0; // STOPS THE JUMP
-            ChangeCollider(WalkingCollider); // change colliders
+            ChangeCollider(SlidingCollider); // change colliders
 
             if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +2f, JumpableLayers))
             {
