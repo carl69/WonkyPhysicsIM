@@ -863,7 +863,6 @@ Transform:
   - {fileID: 1120841993}
   - {fileID: 512131173}
   - {fileID: 542237355}
-  - {fileID: 1483886388}
   - {fileID: 1524625242}
   - {fileID: 1645484904}
   - {fileID: 1591293883}
@@ -877,6 +876,7 @@ Transform:
   - {fileID: 1276143232}
   - {fileID: 561780574}
   - {fileID: 1267060730}
+  - {fileID: 1483886388}
   - {fileID: 427452570}
   - {fileID: 1889315021}
   - {fileID: 1146705768}
@@ -6487,65 +6487,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6902769281374123756, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577020723474587486, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4577020724816262742, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1641510013}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenuButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367198243007209498, guid: 9d9d848279280a047a8b0e208764be5e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9d848279280a047a8b0e208764be5e, type: 3}
---- !u!114 &1641510013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 329204447, guid: 9d9d848279280a047a8b0e208764be5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1641510012}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9800c63e0d5006048999d65154997651, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1644420702
 PrefabInstance:
   m_ObjectHideFlags: 0

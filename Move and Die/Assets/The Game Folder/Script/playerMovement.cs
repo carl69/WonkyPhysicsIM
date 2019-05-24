@@ -64,7 +64,7 @@ public class playerMovement : MonoBehaviour
     public List<AppearingGround> Blocks;
 
     // Dir
-    int PlayerDir = 1;
+    float PlayerDir = 1;
 
     //Refrences
     Rigidbody RB;
@@ -83,6 +83,13 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // DIRection
+        if (Input.GetAxisRaw("Horizontal") != 0 && PlayerDir != Input.GetAxisRaw("Horizontal"))
+        {
+            PlayerDir = Input.GetAxisRaw("Horizontal");
+            anim.SetFloat("PlayerDir", PlayerDir);
+        }
+
         //Walking
         float inputHorizontal = Input.GetAxisRaw("Horizontal");
         if (inputHorizontal != 0 && CurRespawnTime <= 0)
@@ -204,13 +211,11 @@ public class playerMovement : MonoBehaviour
         // DASH
         if (Input.GetButtonDown("Dash") && curDashCount >= 1)
         {
+            // COUNTING DOWN
             curDashCount -= 1;
-
-            if (Input.GetAxisRaw("Horizontal") != 0)
-            {
-                Vector3 pos = transform.position;
-                transform.position = new Vector3(pos.x + LengthOfDash * Input.GetAxisRaw("Horizontal"), pos.y, 0);
-            }
+            // DASHING
+            Vector3 pos = transform.position;
+            transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
         }
 
         // STARTS WALKING

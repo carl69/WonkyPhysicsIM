@@ -2065,6 +2065,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 5412340363597334171}
+    - target: {fileID: 1924751572648917492, guid: 7a064aa6f356d944bb1e23181c2e416a,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 60
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a064aa6f356d944bb1e23181c2e416a, type: 3}
 --- !u!4 &1813155374173430420 stripped
@@ -2086,16 +2091,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 329204448}
     m_Modifications:
-    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
-        type: 3}
-      propertyPath: m_Name
-      value: PauseCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6577279370385694739, guid: 7119d63e5d649cd41b69b2274c03c9c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2199,6 +2194,16 @@ PrefabInstance:
     - target: {fileID: 6577279370385694739, guid: 7119d63e5d649cd41b69b2274c03c9c9,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577279370385694738, guid: 7119d63e5d649cd41b69b2274c03c9c9,
