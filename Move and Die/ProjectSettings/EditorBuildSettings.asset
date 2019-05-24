@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/The Game Folder/Level1.unity
     guid: 155faacc9dac002418a56a75d742a3fc
+  - enabled: 1
+    path: Assets/The Game Folder/TutorialScene.unity
+    guid: eab11937b48446c479f1a0c3c3a571b1
   m_configObjects: {}
