@@ -124,8 +124,11 @@ public class playerMovement : MonoBehaviour
             transform.position.y + 0.9f,
             transform.position.z);
 
+        RaycastHit hits;
+        Vector3 rayStartsPos = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+
         // Checks under
-        if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 1.5f, JumpableLayers))
+        if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, 1.5f, JumpableLayers) || Physics.Raycast(rayStartsPos, transform.TransformDirection(Vector3.right * inputHorizontal), out hits, 0.6f, JumpableLayers))
         {
             Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
