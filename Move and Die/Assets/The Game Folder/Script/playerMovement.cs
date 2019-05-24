@@ -53,6 +53,9 @@ public class playerMovement : MonoBehaviour
     [Header("Air Drop")]
     public float LengthOfDrop = 2;
 
+    // DASH
+    float LengthOfDash = 5;
+
     // Falling blocks
     [Header("BlockSettings")]
     public List<AppearingGround> Blocks;
@@ -190,6 +193,16 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // DASH
+        if (Input.GetButtonDown("Dash"))
+        {
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                Vector3 pos = transform.position;
+                transform.position = new Vector3(pos.x + LengthOfDash * Input.GetAxisRaw("Horizontal"), pos.y, 0);
+            }
+        }
+
         // STARTS WALKING
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
         {
