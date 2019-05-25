@@ -12,20 +12,25 @@ public class MenuManager : MonoBehaviour
     }
 
 
-   public void EzLevel()
+   public void Tutorial()
     {
         SceneManager.LoadScene(1);
 
     }
 
-    public void HardLevel1()
+    public void SkipTutorial()
     {
         SceneManager.LoadScene(2);
 
     }
-    public void HardLevel2()
+    public void loadingLevelX(int indexNr)
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(indexNr);
 
     }
+    //public void LevelSelect()
+    //{
+    //    SceneManager.LoadScene(1);
+
+    //}
 }
