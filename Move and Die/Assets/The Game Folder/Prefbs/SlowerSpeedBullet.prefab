@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3152063639626094045}
   - component: {fileID: 3547712695587828415}
   - component: {fileID: 3587215732972833325}
+  - component: {fileID: 1425654118}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4698,6 +4699,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1425654118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830926350014051912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecb51149836cb646add3b1cb3dd7bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7249912936731586143
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,16 +4937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6931874808437237235, guid: 811910a4e22254948a7c68bb5fd8a9e9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3233298390566516430, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
