@@ -869,22 +869,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 765695150}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
       m_Calls: []
-=======
-      m_Calls:
-      - m_Target: {fileID: 1672912759}
-        m_MethodName: Tutorial
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
->>>>>>> 94199f8041bd2b4ff80108cb1d6a4c59150b8495
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &765695150
@@ -2049,7 +2034,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846982287}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!1 &1905689629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,74 +2270,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114129035}
   m_CullTransparentMesh: 0
-=======
---- !u!1001 &1890195718
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7318099337814437357, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_Name
-      value: Scene Settings (Skybox)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318099337814437354, guid: bc58a83aaccc993499968ad6993ec40b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc58a83aaccc993499968ad6993ec40b, type: 3}
->>>>>>> 94199f8041bd2b4ff80108cb1d6a4c59150b8495
