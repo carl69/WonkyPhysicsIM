@@ -1,18 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class btnFX : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public AudioSource myFx;
+    public AudioClip hoverFx;
+    public AudioClip clickFx;
+
+
+    public void HoverSound()
     {
-        
+        myFx.PlayOneShot(hoverFx);
+    }
+    public void ClickSound()
+    {
+        myFx.PlayOneShot(clickFx);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void loadLevel()
     {
-        
+        SceneManager.LoadScene("Scene 2");
     }
+
 }
