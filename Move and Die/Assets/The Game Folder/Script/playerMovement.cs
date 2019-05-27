@@ -111,21 +111,19 @@ public class playerMovement : MonoBehaviour
                 anim.SetFloat("WalkSpeed", inputHorizontal);
                 transform.position += Vector3.right * WalkingSpeed * inputHorizontal;// * Time.deltaTime;
 
-                if (!crouch)
-                {
-                    if (Input.GetButtonDown("crouch"))
-                    {
-                        anim.SetTrigger("Slide");
 
-                    }
-                    if (Input.GetButton("crouch"))
-                    {
-                        ChangeCollider(SlidingCollider);
-                    }
-                    else if (isGrounded)
-                    {
-                        ChangeCollider(WalkingCollider);
-                    }
+                if (Input.GetButtonDown("crouch"))
+                {
+                    anim.SetTrigger("Slide");
+                    Debug.Log("SLIDE");
+                }
+                if (Input.GetButton("crouch"))
+                {
+                    ChangeCollider(SlidingCollider);
+                }
+                else if (isGrounded)
+                {
+                    ChangeCollider(WalkingCollider);
                 }
             }
         }
@@ -184,27 +182,27 @@ public class playerMovement : MonoBehaviour
 
         anim.SetBool("IsGrounded", isGrounded);
 
-        if (isGrounded)
-        {
-            if (inputHorizontal == 0)
-            {
-                // Crouch
-                if (Input.GetButton("crouch") && CurRespawnTime <= 0)
-                {
-                    crouch = true;
-                    anim.SetBool("Crouch", true);
-                }
-                else
-                {
-                    crouch = false;
-                    anim.SetBool("Crouch", false);
-                }
-                if (!crouch)
-                {
-                    ChangeCollider(WalkingCollider);
-                }
-            }
-        }
+        //if (isGrounded)
+        //{
+        //    if (inputHorizontal == 0)
+        //    {
+        //        // Crouch
+        //        if (Input.GetButton("crouch") && CurRespawnTime <= 0)
+        //        {
+        //            crouch = true;
+        //            anim.SetBool("Crouch", true);
+        //        }
+        //        else
+        //        {
+        //            crouch = false;
+        //            anim.SetBool("Crouch", false);
+        //        }
+        //        if (!crouch)
+        //        {
+        //            ChangeCollider(WalkingCollider);
+        //        }
+        //    }
+        //}
     }
 
     // Update is called once per frame
