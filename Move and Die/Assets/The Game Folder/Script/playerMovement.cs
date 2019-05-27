@@ -220,11 +220,11 @@ public class playerMovement : MonoBehaviour
             transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
         }
 
-        // STARTS WALKING
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
-        {
-            CurRespawnTime = 0;
-        }
+        //// STARTS WALKING
+        //if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        //{
+        //    CurRespawnTime = 0;
+        //}
 
         // teleport down
         if (Input.GetButtonDown("crouch") && CurRespawnTime <= 0)
@@ -236,6 +236,8 @@ public class playerMovement : MonoBehaviour
 
             curJumpHight = 0; // STOPS THE JUMP
             ChangeCollider(SlidingCollider); // change colliders
+
+            Debug.Log("SLIDING"); // DEBUGGING
 
             if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +2f, JumpableLayers))
             {
