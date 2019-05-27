@@ -103,7 +103,6 @@ public class playerMovement : MonoBehaviour
             if (Physics.Raycast(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), out hit, 0.6f, JumpableLayers))
             {
                 Debug.DrawRay(rayStartPos, transform.TransformDirection(Vector3.right * inputHorizontal), Color.yellow); // shows Debug
-                print("WALLS");
             }
             else
             {
@@ -115,7 +114,6 @@ public class playerMovement : MonoBehaviour
                 if (Input.GetButtonDown("crouch"))
                 {
                     anim.SetTrigger("Slide");
-                    Debug.Log("SLIDE");
                 }
                 if (Input.GetButton("crouch"))
                 {
@@ -241,12 +239,10 @@ public class playerMovement : MonoBehaviour
             {
                 RB.velocity = new Vector3(RB.velocity.x, 0, 0);
                 transform.position = hitGround.point + new Vector3(0, 0, 0);
-                Debug.Log("Ground");
             }
             else
             {
                 transform.position += Vector3.down * LengthOfDrop;
-                Debug.Log("AIR");
             }
         }
 
@@ -375,7 +371,7 @@ public class playerMovement : MonoBehaviour
     IEnumerator PlayerDyingWaiting()
     {
         anim.SetTrigger("Death");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         anim.SetTrigger("Respawn");
         transform.position = SpawnPos;
         RespawnPlatforms();
