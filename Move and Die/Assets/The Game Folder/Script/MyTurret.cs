@@ -26,6 +26,30 @@ public class MyTurret : MonoBehaviour
         GMScript.Turrets.Add(this);
     }
 
+    float dir = 0;
+    float oldDir = 0;
+    private void FixedUpdate()
+    {
+        float curDir = Input.GetAxis("Horizontal");
+        if (curDir < 0)
+        {
+            dir = -1;
+        }
+        else if (curDir > 0)
+        {
+            dir = 1;
+        }
+
+        if (dir != oldDir && GameMod == 1)
+        {
+            oldDir = dir;
+            countdownToBulletTime -= 1;
+
+            spawnBullet();
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -41,39 +65,17 @@ public class MyTurret : MonoBehaviour
         }
         if (GameMod == 1)
         {
-            if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
+            if (Input.GetButtonDown("Jump") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
             {
                 countdownToBulletTime -= 1;
-                if (countdownToBulletTime <= 0)
-                {
-                    GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                    // Bullet Var
-                    bulletScript bs = SpawnedBullet.GetComponent<bulletScript>();
-                    bs.GMS = GMScript;
-                    // add bullet to the list
-                    GMScript.BS.Add(bs);
-                    // Bullet rot
-
-                    countdownToBulletTime = bulletTimer;
-                }
+                spawnBullet();
 
             }
         }
         else if (GameMod == 2)
         {
             countdownToBulletTime -= 1 *Time.deltaTime;
-            if (countdownToBulletTime <= 0)
-            {
-                GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
-                // Bullet Var
-                bulletScript bs = SpawnedBullet.GetComponent<bulletScript>();
-                bs.GMS = GMScript;
-                // add bullet to the list
-                GMScript.BS.Add(bs);
-                // Bullet rot
-
-                countdownToBulletTime = bulletTimer;
-            }
+            spawnBullet();
         }
 
     }
@@ -86,4 +88,20 @@ public class MyTurret : MonoBehaviour
         }
     }
 
+    void spawnBullet()
+    {
+        countdownToBulletTime -= 1;
+        if (countdownToBulletTime <= 0)
+        {
+            GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);
+            // Bullet Var
+            bulletScript bs = SpawnedBullet.GetComponent<bulletScript>();
+            bs.GMS = GMScript;
+            // add bullet to the list
+            GMScript.BS.Add(bs);
+            // Bullet rot
+
+            countdownToBulletTime = bulletTimer;
+        }
+    }
 }

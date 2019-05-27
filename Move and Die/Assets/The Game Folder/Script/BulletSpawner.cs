@@ -10,8 +10,8 @@ public class BulletSpawner : MonoBehaviour
 
     float dir = 0;
     float oldDir = 0;
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
         float curDir = Input.GetAxis("Horizontal");
         if (curDir < 0)
@@ -26,15 +26,33 @@ public class BulletSpawner : MonoBehaviour
         if (dir != oldDir)
         {
             oldDir = dir;
+
             spawnBullet();
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        //float curDir = Input.GetAxis("Horizontal");
+        //if (curDir < 0)
+        //{
+        //    dir = -1;
+        //}
+        //else if (curDir > 0)
+        //{
+        //    dir = 1;
+        //}
+
+        //if (dir != oldDir)
+        //{
+        //    oldDir = dir;
+        //    spawnBullet();
+        //}
 
 
         if (Input.GetButtonDown("Jump") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
         {
             spawnBullet();
-
-
         }
     }
     void spawnBullet()
