@@ -8,27 +8,49 @@ public class BulletSpawner : MonoBehaviour
     public Transform Player;
     public GameManagerScript GMScript;
 
-
+    float dir = 0;
+    float oldDir = 0;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("SpawnBullet") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
+        float curDir = Input.GetAxis("Horizontal");
+        if (curDir < 0)
         {
-
-
-            GameObject bullet = Instantiate(Bullets);
-            // Bullet Var
-            bulletScript bs = bullet.GetComponent<bulletScript>();
-            bs.GMS = GMScript;
-            // add bullet to the list
-            GMScript.BS.Add(bs);
-            // Bullet rot
-            bullet.transform.eulerAngles = Vector3.down * 90;
-            // Bullet Pos
-            bullet.transform.position = new Vector3(
-                transform.position.x + 30,
-                Player.position.y + Random.Range(0,4),
-                0);
+            dir = -1;
         }
+        else if (curDir > 0)
+        {
+            dir = 1;
+        }
+
+        if (dir != oldDir)
+        {
+            oldDir = dir;
+            spawnBullet();
+        }
+
+
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("crouch") || Input.GetButtonDown("Dash"))
+        {
+            spawnBullet();
+
+
+        }
+    }
+    void spawnBullet()
+    {
+        GameObject bullet = Instantiate(Bullets);
+        // Bullet Var
+        bulletScript bs = bullet.GetComponent<bulletScript>();
+        bs.GMS = GMScript;
+        // add bullet to the list
+        GMScript.BS.Add(bs);
+        // Bullet rot
+        bullet.transform.eulerAngles = Vector3.down * 90;
+        // Bullet Pos
+        bullet.transform.position = new Vector3(
+            transform.position.x + 30,
+            Player.position.y + Random.Range(0, 4),
+            0);
     }
 }
