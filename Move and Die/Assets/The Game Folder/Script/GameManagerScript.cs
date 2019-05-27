@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    // deaths
+    public int PlayerDeaths = 0;
+
+    //
     public int GameMod = 1;
     public List<MyTurret> Turrets = new List<MyTurret>();
 
@@ -48,6 +52,10 @@ public class GameManagerScript : MonoBehaviour
             }
         }
 
+    }
+    public void deathCount()
+    {
+        PlayerDeaths += 1;
     }
 
 
