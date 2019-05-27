@@ -57,6 +57,7 @@ public class GameManagerScript : MonoBehaviour
     public void deathCount()
     {
         PlayerDeaths += 1;
+        Debug.Log("Nr of player deaths in this scene = " + PlayerDeaths);
     }
 
 

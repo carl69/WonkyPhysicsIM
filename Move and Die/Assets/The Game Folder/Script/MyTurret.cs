@@ -90,7 +90,6 @@ public class MyTurret : MonoBehaviour
 
     void spawnBullet()
     {
-        countdownToBulletTime -= 1;
         if (countdownToBulletTime <= 0)
         {
             GameObject SpawnedBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation);

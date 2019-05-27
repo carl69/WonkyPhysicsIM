@@ -363,7 +363,7 @@ public class playerMovement : MonoBehaviour
             RB.velocity = new Vector3(0, 0, 0);
 
             gms.playerDeath();
-
+            ChangeCollider(WalkingCollider);
             StartCoroutine("PlayerDyingWaiting");
         }       
     }
