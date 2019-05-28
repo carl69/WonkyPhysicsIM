@@ -218,6 +218,7 @@ public class playerMovement : MonoBehaviour
             // COUNTING DOWN
             curDashCount -= 1;
             // DASHING
+            anim.SetTrigger("Dash");
             Vector3 pos = transform.position;
             transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
         }
