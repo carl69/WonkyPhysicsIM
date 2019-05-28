@@ -57,7 +57,11 @@ public class BulletSpawner : MonoBehaviour
     }
     void spawnBullet()
     {
-        GameObject bullet = Instantiate(Bullets);
+        GameObject bullet = Instantiate(Bullets, new Vector3(
+            transform.position.x + 30,
+            Player.position.y + Random.Range(0, 4),
+            0),Quaternion.identity);
+
         // Bullet Var
         bulletScript bs = bullet.GetComponent<bulletScript>();
         bs.GMS = GMScript;
@@ -65,10 +69,10 @@ public class BulletSpawner : MonoBehaviour
         GMScript.BS.Add(bs);
         // Bullet rot
         bullet.transform.eulerAngles = Vector3.down * 90;
-        // Bullet Pos
-        bullet.transform.position = new Vector3(
-            transform.position.x + 30,
-            Player.position.y + Random.Range(0, 4),
-            0);
+        //// Bullet Pos
+        //bullet.transform.position = new Vector3(
+        //    transform.position.x + 30,
+        //    Player.position.y + Random.Range(0, 4),
+        //    0);
     }
 }
