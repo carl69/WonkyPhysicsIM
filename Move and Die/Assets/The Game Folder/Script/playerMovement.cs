@@ -234,8 +234,6 @@ public class playerMovement : MonoBehaviour
             curJumpHight = 0; // STOPS THE JUMP
             ChangeCollider(SlidingCollider); // change colliders
 
-            Debug.Log("SLIDING"); // DEBUGGING
-
             if (Physics.Raycast(RayStartPos, transform.TransformDirection(Vector3.down), out hitGround, LengthOfDrop +2f, JumpableLayers))
             {
                 RB.velocity = new Vector3(RB.velocity.x, 0, 0);
