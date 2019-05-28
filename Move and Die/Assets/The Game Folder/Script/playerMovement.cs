@@ -45,7 +45,7 @@ public class playerMovement : MonoBehaviour
     // Crouch
     [Header("SliderSettings")]
     public Collider SlidingCollider;
-    bool crouch = false;
+    //bool crouch = false;
 
     public GameObject SlidingPartical;
     GameObject curSlidingPartical;
@@ -180,6 +180,7 @@ public class playerMovement : MonoBehaviour
 
         anim.SetBool("IsGrounded", isGrounded);
 
+        ////////////////////////////////////////////////////////////////////// Creates animation errors
         //if (isGrounded)
         //{
         //    if (inputHorizontal == 0)
@@ -247,7 +248,7 @@ public class playerMovement : MonoBehaviour
         }
 
         // STOP JUMPING
-        if (Input.GetButtonUp("Jump") && CurRespawnTime <= 0)
+        if (Input.GetButtonUp("Jump"))
         {
             curJumpHight = curJumpHight / 2;
         }
@@ -373,6 +374,7 @@ public class playerMovement : MonoBehaviour
         anim.SetTrigger("Death");
         yield return new WaitForSeconds(0.5f);
         anim.SetTrigger("Respawn");
+        ChangeCollider(WalkingCollider);
         transform.position = SpawnPos;
         RespawnPlatforms();
 
