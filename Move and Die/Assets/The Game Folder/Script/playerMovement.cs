@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
     public bool died = false;
 
     // RESPAWN
-    public float RespawnTime = 2f;
+    float RespawnTime = 1f;
     float CurRespawnTime = 0;
 
     // Crouch
@@ -372,7 +372,7 @@ public class playerMovement : MonoBehaviour
     IEnumerator PlayerDyingWaiting()
     {
         anim.SetTrigger("Death");
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         anim.SetTrigger("Respawn");
         ChangeCollider(WalkingCollider);
         transform.position = SpawnPos;
