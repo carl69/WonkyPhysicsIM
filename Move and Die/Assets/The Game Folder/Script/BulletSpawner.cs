@@ -11,6 +11,7 @@ public class BulletSpawner : MonoBehaviour
     float dir = 0;
     float oldDir = 0;
 
+    public bool SpawnBullets = true;
     private void FixedUpdate()
     {
         float curDir = Input.GetAxis("Horizontal");
@@ -57,22 +58,26 @@ public class BulletSpawner : MonoBehaviour
     }
     void spawnBullet()
     {
-        GameObject bullet = Instantiate(Bullets, new Vector3(
-            transform.position.x + 30,
-            Player.position.y + Random.Range(0, 4),
-            0),Quaternion.identity);
+        if (SpawnBullets)
+        {
+            GameObject bullet = Instantiate(Bullets, new Vector3(
+                transform.position.x + 30,
+                Player.position.y + Random.Range(0, 4),
+                0), Quaternion.identity);
 
-        // Bullet Var
-        bulletScript bs = bullet.GetComponent<bulletScript>();
-        bs.GMS = GMScript;
-        // add bullet to the list
-        GMScript.BS.Add(bs);
-        // Bullet rot
-        bullet.transform.eulerAngles = Vector3.down * 90;
-        //// Bullet Pos
-        //bullet.transform.position = new Vector3(
-        //    transform.position.x + 30,
-        //    Player.position.y + Random.Range(0, 4),
-        //    0);
+            // Bullet Var
+            bulletScript bs = bullet.GetComponent<bulletScript>();
+            bs.GMS = GMScript;
+            // add bullet to the list
+            GMScript.BS.Add(bs);
+            // Bullet rot
+            bullet.transform.eulerAngles = Vector3.down * 90;
+            //// Bullet Pos
+            //bullet.transform.position = new Vector3(
+            //    transform.position.x + 30,
+            //    Player.position.y + Random.Range(0, 4),
+            //    0);
+        }
+
     }
 }

@@ -129,8 +129,22 @@ MonoBehaviour:
   JumpableLayers:
     serializedVersion: 2
     m_Bits: 2048
+  JumpingCollider: {fileID: 0}
   isGrounded: 0
+  LandingPartical: {fileID: 0}
+  LandingParticalSpawn: {fileID: 0}
   WalkingSpeed: 0.2
+  WalkingCollider: {fileID: 0}
+  anim: {fileID: 0}
+  SpawnPos: {x: 0, y: 0, z: 0}
+  died: 0
+  SlidingCollider: {fileID: 0}
+  SlidingPartical: {fileID: 0}
+  LengthOfDrop: 2
+  PlayerDashUnlock: 1
+  DashCount: 1
+  Blocks: []
+  Body: {fileID: 4175821049075783390}
 --- !u!1001 &4175821049075814526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +207,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9500000, guid: 1e66f333c84775443b2452d2a8a43605, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e66f333c84775443b2452d2a8a43605, type: 3}
+--- !u!1 &4175821049075783390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1e66f333c84775443b2452d2a8a43605,
+    type: 3}
+  m_PrefabInstance: {fileID: 4175821049075814526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4175821049075944190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1e66f333c84775443b2452d2a8a43605,

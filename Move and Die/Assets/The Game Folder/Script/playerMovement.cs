@@ -66,6 +66,9 @@ public class playerMovement : MonoBehaviour
     public List<AppearingGround> Blocks;
 
     // Dir
+    [Header("Direction")]
+    public GameObject Body;
+    Transform BodyTransform;
     float PlayerDir = 1;
 
     //Refrences
@@ -81,6 +84,7 @@ public class playerMovement : MonoBehaviour
         RB = GetComponent<Rigidbody>();
         curFallSpeed = fallSpeed;// set the fall speed on the start incase the player starts in the air
         curActivCollider = WalkingCollider;// set the activ collider
+        BodyTransform = Body.transform;
     }
 
     private void FixedUpdate()
@@ -90,6 +94,7 @@ public class playerMovement : MonoBehaviour
         {
             PlayerDir = Input.GetAxisRaw("Horizontal");
             anim.SetFloat("PlayerDir", PlayerDir);
+            BodyTransform.localEulerAngles = new Vector3(0, 90 * PlayerDir,0);
         }
 
         //Walking
