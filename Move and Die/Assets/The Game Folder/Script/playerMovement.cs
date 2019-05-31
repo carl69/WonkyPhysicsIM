@@ -92,6 +92,7 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SlidingEffect.SetActive(false);
         audioS = GetComponent<AudioSource>();
         gms = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
         SpawnPos = transform.position;
@@ -147,6 +148,7 @@ public class playerMovement : MonoBehaviour
                 if (Input.GetButton("crouch"))
                 {
                     ChangeCollider(SlidingCollider);
+                    SlidingEffect.SetActive(true);
                 }
                 else if (isGrounded)
                 {
@@ -244,7 +246,6 @@ public class playerMovement : MonoBehaviour
             // DASHING
             anim.SetTrigger("Dash");
             audioS.PlayOneShot(DashSfx);
-            SlidingEffect.SetActive(true);
 
             Vector3 pos = transform.position;
             transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
