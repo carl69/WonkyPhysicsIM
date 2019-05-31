@@ -71,7 +71,16 @@ public class playerMovement : MonoBehaviour
     Transform BodyTransform;
     float PlayerDir = 1;
 
+    // Sounds
+    [Header("SFX")]
+    public AudioClip JumpingSfx;
+
+    // Effects
+    [Header("Sliding")]
+    public GameObject SlidingEffect;
+
     //Refrences
+    AudioSource audioS;
     Rigidbody RB;
     Collider curActivCollider;
     GameManagerScript gms;
@@ -79,6 +88,7 @@ public class playerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioS = GetComponent<AudioSource>();
         gms = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
         SpawnPos = transform.position;
         RB = GetComponent<Rigidbody>();
@@ -219,6 +229,8 @@ public class playerMovement : MonoBehaviour
             curDashCount -= 1;
             // DASHING
             anim.SetTrigger("Dash");
+            SlidingEffect.SetActive(true);
+
             Vector3 pos = transform.position;
             transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
         }
