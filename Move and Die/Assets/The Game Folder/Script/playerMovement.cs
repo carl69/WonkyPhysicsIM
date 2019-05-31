@@ -80,7 +80,7 @@ public class playerMovement : MonoBehaviour
     public AudioClip DashSfx;
 
     // Effects
-    [Header("Sliding")]
+    [Header("Effects")]
     public GameObject SlidingEffect;
 
     //Refrences
