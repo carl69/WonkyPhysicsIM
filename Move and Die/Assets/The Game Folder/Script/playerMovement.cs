@@ -403,6 +403,7 @@ public class playerMovement : MonoBehaviour
     IEnumerator PlayerDyingWaiting()
     {
         anim.SetTrigger("Death");
+        StopCoroutine("Jumping");
         yield return new WaitForSeconds(0.3f);
         anim.SetTrigger("Respawn");
         ChangeCollider(WalkingCollider);
