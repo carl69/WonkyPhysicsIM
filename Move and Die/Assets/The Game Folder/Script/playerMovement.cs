@@ -15,6 +15,7 @@ public class playerMovement : MonoBehaviour
     public LayerMask JumpableLayers;
     public Collider JumpingCollider;
     int jumps = 0;
+    bool jumped = false;
 
     // IsGrounded
     [Header("isGrounded Settings")]
@@ -178,14 +179,14 @@ public class playerMovement : MonoBehaviour
             Debug.DrawRay(RayStartPos, transform.TransformDirection(Vector3.down) * hitGround.distance, Color.yellow); // shows Debug
             isGrounded = true;
             CurAirTimer = AirJumpTime + Time.time;
-            //Set Double Jumps
-            jumps = 1;
+
             //Set Dash
             curDashCount = DashCount;
 
             // LANDED
             if (landed == false)
             {
+                jumped = false;
                 landed = true;
                 GameObject landingpartical = Instantiate(LandingPartical);
                 landingpartical.transform.position = LandingParticalSpawn.position;
@@ -304,17 +305,18 @@ public class playerMovement : MonoBehaviour
                 {
                     
                 }
-                else if (!isGrounded)// Remove the jumps
+                else if (!isGrounded || jumped)// Remove the jumps
                 {
                     jumps -= 1;
                 }
 
                 //setting maxHight
-                if (isGrounded)// normal jump
+                if (!jumped)// normal jump
                 {
                     curJumpHight = JumpHight + transform.position.y;
                     anim.SetTrigger("Jumping");
                     audioS.PlayOneShot(JumpingSfx);
+
                 }
                 else // double jump
                 {
@@ -324,6 +326,7 @@ public class playerMovement : MonoBehaviour
 
                 }
 
+                jumped = true;
                 // no more extra airtime for you
                 CurAirTimer = 0;
                 isGrounded = false;
