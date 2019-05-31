@@ -4821,6 +4821,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 14
   GMS: {fileID: 0}
+  impactMark: {fileID: 8847000887341262227, guid: 0697161e65a52ac44bd85672f1082278,
+    type: 3}
 --- !u!54 &7249912936731586136
 Rigidbody:
   m_ObjectHideFlags: 0

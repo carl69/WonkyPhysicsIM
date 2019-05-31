@@ -7,6 +7,7 @@ public class bulletScript : MonoBehaviour
     public float Speed;
     [HideInInspector]
     public GameManagerScript GMS;
+    public GameObject impactMark;
 
 
     void Update()
@@ -32,6 +33,8 @@ public class bulletScript : MonoBehaviour
 
     public void DestroyBullet()
     {
+        Instantiate(impactMark, gameObject.transform.position, gameObject.transform.rotation);
+
         Destroy(this.gameObject); // bullet gets destroyed
     }
 }
