@@ -2254,6 +2254,16 @@ PrefabInstance:
       propertyPath: stopAction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1981614863983521230, guid: 60644283a967a284e9d2678f4482a90e,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981614863983521230, guid: 60644283a967a284e9d2678f4482a90e,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60644283a967a284e9d2678f4482a90e, type: 3}
 --- !u!1 &5426384396589713079 stripped
