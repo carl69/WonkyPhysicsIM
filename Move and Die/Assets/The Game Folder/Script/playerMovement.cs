@@ -79,13 +79,23 @@ public class playerMovement : MonoBehaviour
     public AudioClip DoubleJumpSfx;
     public AudioClip WalkingSfx;
     public AudioClip DashSfx;
+    public AudioClip DeathSfx;
+    public AudioClip RespawnSfx;
+
+    // Sources
+    [Header("Audios Sources")]
+    public AudioSource AS1;
+    public AudioSource AS2;
+    public AudioSource AS3;
+    public AudioSource AS4;
+    public AudioSource AS5;
+    public AudioSource AS6;
 
     // Effects
     [Header("Effects")]
     public GameObject SlidingEffect;
 
     //Refrences
-    AudioSource audioS;
     Rigidbody RB;
     Collider curActivCollider;
     GameManagerScript gms;
@@ -94,7 +104,6 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
         SlidingEffect.SetActive(false);
-        audioS = GetComponent<AudioSource>();
         gms = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
         SpawnPos = transform.position;
         RB = GetComponent<Rigidbody>();
@@ -118,9 +127,9 @@ public class playerMovement : MonoBehaviour
             walking = false;
         }
 
-        if (walking && ! audioS.isPlaying)
+        if (walking && ! AS3.isPlaying)
         {
-            audioS.PlayOneShot(WalkingSfx);
+            AS3.PlayOneShot(WalkingSfx);
         }
 
         //Walking
@@ -246,7 +255,7 @@ public class playerMovement : MonoBehaviour
             curDashCount -= 1;
             // DASHING
             anim.SetTrigger("Dash");
-            audioS.PlayOneShot(DashSfx);
+            AS4.PlayOneShot(DashSfx);
 
             Vector3 pos = transform.position;
             transform.position = new Vector3(pos.x + LengthOfDash * PlayerDir, pos.y, 0);
@@ -315,14 +324,14 @@ public class playerMovement : MonoBehaviour
                 {
                     curJumpHight = JumpHight + transform.position.y;
                     anim.SetTrigger("Jumping");
-                    audioS.PlayOneShot(JumpingSfx);
+                    AS1.PlayOneShot(JumpingSfx);
 
                 }
                 else // double jump
                 {
                     curJumpHight = JumpHight/2 + transform.position.y;
                     anim.SetTrigger("DoubleJump");
-                    audioS.PlayOneShot(DoubleJumpSfx);
+                    AS2.PlayOneShot(DoubleJumpSfx);
 
                 }
 
@@ -406,9 +415,11 @@ public class playerMovement : MonoBehaviour
 
     IEnumerator PlayerDyingWaiting()
     {
+        AS5.PlayOneShot(DeathSfx);
         anim.SetTrigger("Death");
         StopCoroutine("Jumping");
         yield return new WaitForSeconds(0.3f);
+        AS6.PlayOneShot(RespawnSfx);
         anim.SetTrigger("Respawn");
         ChangeCollider(WalkingCollider);
         transform.position = SpawnPos;
