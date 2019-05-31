@@ -28,6 +28,7 @@ public class playerMovement : MonoBehaviour
     [Header("Walking Settings")]
     public float WalkingSpeed = 10;
     public Collider WalkingCollider;
+    bool walking = false;
 
     // Animations
     [Header("Animation Settings")]
@@ -74,6 +75,9 @@ public class playerMovement : MonoBehaviour
     // Sounds
     [Header("SFX")]
     public AudioClip JumpingSfx;
+    public AudioClip DoubleJumpSfx;
+    public AudioClip WalkingSfx;
+    public AudioClip DashSfx;
 
     // Effects
     [Header("Sliding")]
@@ -105,6 +109,16 @@ public class playerMovement : MonoBehaviour
             PlayerDir = Input.GetAxisRaw("Horizontal");
             anim.SetFloat("PlayerDir", PlayerDir);
             BodyTransform.localEulerAngles = new Vector3(0, 90 * PlayerDir,0);
+            walking = true;
+        }
+        else if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            walking = false;
+        }
+
+        if (walking && ! audioS.isPlaying)
+        {
+            audioS.PlayOneShot(WalkingSfx);
         }
 
         //Walking
@@ -229,6 +243,7 @@ public class playerMovement : MonoBehaviour
             curDashCount -= 1;
             // DASHING
             anim.SetTrigger("Dash");
+            audioS.PlayOneShot(DashSfx);
             SlidingEffect.SetActive(true);
 
             Vector3 pos = transform.position;
@@ -294,17 +309,17 @@ public class playerMovement : MonoBehaviour
                 }
 
                 //setting maxHight
-                if (isGrounded)
+                if (isGrounded)// normal jump
                 {
                     curJumpHight = JumpHight + transform.position.y;
                     anim.SetTrigger("Jumping");
-
+                    audioS.PlayOneShot(JumpingSfx);
                 }
-                else
+                else // double jump
                 {
                     curJumpHight = JumpHight/2 + transform.position.y;
                     anim.SetTrigger("DoubleJump");
-
+                    audioS.PlayOneShot(DoubleJumpSfx);
 
                 }
 
