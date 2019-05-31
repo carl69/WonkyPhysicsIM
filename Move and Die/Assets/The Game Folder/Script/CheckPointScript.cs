@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckPointScript : MonoBehaviour
 {
     public GameObject ball;
+    public GameObject Couonter;
+    public Text UiText;
+    GameManagerScript GM;
+    private void Start()
+    {
+        GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -14,7 +22,10 @@ public class CheckPointScript : MonoBehaviour
 
             other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
 
+            UiText.text = GM.PlayerDeaths.ToString();
+
             ball.SetActive(true);
+            Couonter.SetActive(true);
         }
     }
     //private void OnTriggerEnter(Collider other)
