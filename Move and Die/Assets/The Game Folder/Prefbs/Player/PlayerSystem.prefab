@@ -677,6 +677,11 @@ PrefabInstance:
       propertyPath: SlidingEffect
       value: 
       objectReference: {fileID: 5426384396589713079}
+    - target: {fileID: 717979662080814621, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1992363086812224749, guid: bf27818e5509810429e1d7e897355300,
         type: 3}
       propertyPath: m_Radius
@@ -1942,12 +1947,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.7554133e-14
       objectReference: {fileID: 0}
-    - target: {fileID: 717979662080814621, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243889303288240044, guid: d8e3975e16f3eb04582ed66adcd8efbc,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf27818e5509810429e1d7e897355300, type: 3}
 --- !u!1 &5412340363597334247 stripped
@@ -2088,7 +2087,7 @@ PrefabInstance:
     - target: {fileID: 1924751572648917492, guid: 7a064aa6f356d944bb1e23181c2e416a,
         type: 3}
       propertyPath: moveSpeed
-      value: 60
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a064aa6f356d944bb1e23181c2e416a, type: 3}

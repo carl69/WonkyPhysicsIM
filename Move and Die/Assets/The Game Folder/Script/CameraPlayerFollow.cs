@@ -18,9 +18,14 @@ public class CameraPlayerFollow : MonoBehaviour
             transform.position.y,
             PlayerPos.z);
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            targetPos,
-            moveSpeed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(
+        //    transform.position,
+        //    targetPos,
+        //    moveSpeed * Time.deltaTime);
+
+        transform.position = Vector3.Lerp(
+           transform.position,
+           targetPos,
+           moveSpeed * Time.deltaTime);
     }
 }

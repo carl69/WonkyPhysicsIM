@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 6466026807806342692}
   m_Layer: 11
   m_Name: CHECKPOINT
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4957,6 +4957,7 @@ MonoBehaviour:
   ball: {fileID: 1558065598704030672}
   Couonter: {fileID: 787966678}
   UiText: {fileID: 246329632}
+  anim: {fileID: 8694056944767618074}
 --- !u!1001 &1558065598704063860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4970,7 +4971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2873f59ce9509f740bc8c32927094c11, type: 3}
       propertyPath: m_LocalPosition.x

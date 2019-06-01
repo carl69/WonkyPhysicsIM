@@ -43,6 +43,7 @@ public class playerMovement : MonoBehaviour
     // RESPAWN
     float RespawnTime = 1f;
     float CurRespawnTime = 0;
+    CheckPointScript Cps;
 
     // Crouch
     [Header("SliderSettings")]
@@ -426,6 +427,11 @@ public class playerMovement : MonoBehaviour
         RespawnPlatforms();
 
         died = false;
+        if (Cps != null)
+        {
+            Cps.respawning();
+        }
+
 
     }
 
@@ -447,6 +453,14 @@ public class playerMovement : MonoBehaviour
         foreach (AppearingGround a in Blocks)
         {
             a.Appear();
+        }
+    }
+
+    private void OnCollisionEnter(Collision c)
+    {
+        if (c.gameObject.tag == "CheckPoint")
+        {
+            Cps = c.gameObject.GetComponent<CheckPointScript>();
         }
     }
 }

@@ -9,6 +9,7 @@ public class CheckPointScript : MonoBehaviour
     public GameObject Couonter;
     public Text UiText;
     GameManagerScript GM;
+    public Animator anim;
     private void Start()
     {
         GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
@@ -28,13 +29,8 @@ public class CheckPointScript : MonoBehaviour
             Couonter.SetActive(true);
         }
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        Vector2 spawnPoint = new Vector2(transform.position.x, transform.position.y + 2);
-
-    //        other.gameObject.GetComponent<playerMovement>().SpawnPos = spawnPoint;
-    //    }
-    //}
+    public void respawning()
+    {
+        anim.SetTrigger("Respawning");
+    }
 }
