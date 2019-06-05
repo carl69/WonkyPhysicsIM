@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3416998234847230869}
   - component: {fileID: 3416998234847230875}
   - component: {fileID: 3416998234847230872}
-  - component: {fileID: 3416998234847230870}
   m_Layer: 0
   m_Name: Audio
   m_TagString: AudioManager
@@ -189,15 +188,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bass: 0
---- !u!114 &3416998234847230870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3416998234847230873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 703224194dd8239429a774ad80c477a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
