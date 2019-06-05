@@ -41,6 +41,7 @@ ModelImporter:
     4300006: Cube.001
     7400000: Armature|CloseDoor
     7400002: Armature|OpenDoor
+    7400004: Armature|CloseDoor.001
     9500000: //RootNode
   externalObjects: {}
   materials:
