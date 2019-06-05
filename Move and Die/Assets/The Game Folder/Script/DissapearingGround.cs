@@ -28,12 +28,16 @@ public class DissapearingGround : MonoBehaviour
         if (collision.gameObject.tag == "Player"&&dissapearing==false)
         {
             dissapearing = true;
-            audioS.Play();
             //Fetch the Renderer from the GameObject
             //Renderer rend = GetComponent<Renderer>();
 
             blockAnimator.SetBool("Fall", true);
         }
+    }
+    public void PlayAudio()
+    {
+        audioS.Play();
+
     }
     public void DestroyBlock() {
         gameObject.SetActive(true);
