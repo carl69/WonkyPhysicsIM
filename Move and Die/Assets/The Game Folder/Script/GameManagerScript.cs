@@ -25,6 +25,17 @@ public class GameManagerScript : MonoBehaviour
         deathCount();
     }
 
+    public void GameWon()
+    {
+        foreach (bulletScript bulletS in BS)
+        {
+            //BS.Remove(bulletS);
+
+            bulletS.DestroyBullet();
+        }
+        BS.Clear();
+    }
+
     // GAMEMODE
     private void Start()
     {
