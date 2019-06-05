@@ -44,6 +44,15 @@ public class GameManagerScript : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Time.timeScale = 0.25f;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Gamemode 1");
