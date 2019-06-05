@@ -961,6 +961,14 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.06666667
+    functionName: DestroyBlock
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 120b52df8a04614478cb429a73c6c395,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.75
     functionName: DestroyBlock
     data: 
