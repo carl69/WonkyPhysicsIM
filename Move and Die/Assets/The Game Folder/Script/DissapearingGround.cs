@@ -8,8 +8,11 @@ public class DissapearingGround : MonoBehaviour
     bool dissapearing;
     public Renderer rend;
     Animator blockAnimator;
+    AudioSource audioS;
+
     private void Start()
     {
+        audioS = GetComponent<AudioSource>();
         blockAnimator = GetComponent<Animator>();
     }
     IEnumerator dissapearTimer()
@@ -25,6 +28,7 @@ public class DissapearingGround : MonoBehaviour
         if (collision.gameObject.tag == "Player"&&dissapearing==false)
         {
             dissapearing = true;
+            audioS.Play();
             //Fetch the Renderer from the GameObject
             //Renderer rend = GetComponent<Renderer>();
 
