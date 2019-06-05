@@ -11,6 +11,9 @@ public class GameManagerScript : MonoBehaviour
     public int GameMod = 1;
     public List<MyTurret> Turrets = new List<MyTurret>();
 
+    // TURRETS
+    List<MyTurret> MTList = new List<MyTurret>();
+
     // Bullets
     public List<bulletScript> BS = new List<bulletScript>();
     public void playerDeath()
@@ -40,6 +43,11 @@ public class GameManagerScript : MonoBehaviour
     private void Start()
     {
         GameMod = PlayerPrefs.GetInt("GameMode",1); // LOAD THE GAMEMODE
+        foreach (GameObject i in GameObject.FindGameObjectsWithTag("Turret"))
+        {
+            MTList.Add(i.GetComponent<MyTurret>());
+        }
+       // MT = GameObject.FindGameObjectsWithTag("Turret")
     }
 
     private void Update()

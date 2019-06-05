@@ -418,6 +418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LastLevel: 0
   LevelCanvas: {fileID: 2449427821737005864}
+  anim: {fileID: 3983395716087442101}
 --- !u!82 &7133184206442395271
 AudioSource:
   m_ObjectHideFlags: 0
@@ -609,11 +610,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6023237901584484063}
     m_Modifications:
-    - target: {fileID: 4124069961249899777, guid: 711ec8b38db8c8648bf574192632a65a,
-        type: 3}
-      propertyPath: m_Name
-      value: Model
-      objectReference: {fileID: 0}
     - target: {fileID: 3383207999308491988, guid: 711ec8b38db8c8648bf574192632a65a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -644,11 +640,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.87
       objectReference: {fileID: 0}
+    - target: {fileID: 4124069961249899777, guid: 711ec8b38db8c8648bf574192632a65a,
+        type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 711ec8b38db8c8648bf574192632a65a, type: 3}
 --- !u!4 &2185086778064848306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3383207999308491988, guid: 711ec8b38db8c8648bf574192632a65a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3504201938709227878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3983395716087442101 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 569336279356654547, guid: 711ec8b38db8c8648bf574192632a65a,
     type: 3}
   m_PrefabInstance: {fileID: 3504201938709227878}
   m_PrefabAsset: {fileID: 0}
@@ -659,6 +666,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6023237901584484063}
     m_Modifications:
+    - target: {fileID: 5643290870897277634, guid: 44ca183795cb81046a472d61e1d5a232,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643290870897277634, guid: 44ca183795cb81046a472d61e1d5a232,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5643290870897277646, guid: 44ca183795cb81046a472d61e1d5a232,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -762,16 +779,6 @@ PrefabInstance:
     - target: {fileID: 5643290870897277646, guid: 44ca183795cb81046a472d61e1d5a232,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643290870897277634, guid: 44ca183795cb81046a472d61e1d5a232,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelSelect
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643290870897277634, guid: 44ca183795cb81046a472d61e1d5a232,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5643290871465516323, guid: 44ca183795cb81046a472d61e1d5a232,

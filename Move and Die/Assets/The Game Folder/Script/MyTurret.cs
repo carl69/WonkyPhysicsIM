@@ -16,6 +16,7 @@ public class MyTurret : MonoBehaviour
     GameManagerScript GMScript;
     public int GameMod = 1;
 
+    public bool Deactivated;
     // Start is called before the first frame update
     void Start()
     {

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1924751572648917492}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Camera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,6 +166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullets: {fileID: 7249912936731586143, guid: 8d7f3f90d9583274ab886aa7f989d83a, type: 3}
+  Player: {fileID: 0}
+  GMScript: {fileID: 0}
+  SpawnBullets: 1
 --- !u!114 &1924751572648917492
 MonoBehaviour:
   m_ObjectHideFlags: 0
