@@ -31,6 +31,7 @@ public class bulletScript : MonoBehaviour
         DestroyBullet();
     }
 
+
     public void DestroyBullet()
     {
         Instantiate(impactMark, gameObject.transform.position, gameObject.transform.rotation);
