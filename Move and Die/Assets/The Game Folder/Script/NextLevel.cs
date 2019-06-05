@@ -29,10 +29,12 @@ public class NextLevel : MonoBehaviour
             BS.SpawnBullets = false;// STOP CAMERA SPAWNING
             GMS.StopTurrets(); // STOP TURRETS FROM SHOOTING
             PM.enabled = false; // STOP PLAYER
+            
             won = true;
             GMS.GameWon();
             AudioS.Play();
             anim.SetBool("Finish",true);
+            StartCoroutine("Waiting");
         }
     }
     IEnumerator Waiting()
