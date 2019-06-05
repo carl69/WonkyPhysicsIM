@@ -198,6 +198,7 @@ public class playerMovement : MonoBehaviour
             {
                 jumped = false;
                 landed = true;
+                jumps = 1;
                 GameObject landingpartical = Instantiate(LandingPartical);
                 landingpartical.transform.position = LandingParticalSpawn.position;
             }
