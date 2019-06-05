@@ -4848,7 +4848,8 @@ AudioSource:
   m_GameObject: {fileID: 7249912936731586143}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243174808461223848, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: c845ed6df0eacc44c92c42b69f9719cb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -4942,11 +4943,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7249912936731586139}
     m_Modifications:
-    - target: {fileID: 6931874808437237234, guid: 811910a4e22254948a7c68bb5fd8a9e9,
-        type: 3}
-      propertyPath: m_Name
-      value: Cool Effect
-      objectReference: {fileID: 0}
     - target: {fileID: 6931874808437237233, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5001,6 +4997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931874808437237234, guid: 811910a4e22254948a7c68bb5fd8a9e9,
+        type: 3}
+      propertyPath: m_Name
+      value: Cool Effect
       objectReference: {fileID: 0}
     - target: {fileID: 528446583125354504, guid: 811910a4e22254948a7c68bb5fd8a9e9,
         type: 3}

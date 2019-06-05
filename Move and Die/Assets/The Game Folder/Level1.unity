@@ -10281,6 +10281,47 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.47
       objectReference: {fileID: 0}
+    - target: {fileID: 184599890187287677, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: DashSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a4378888201b544cb8b147d08b11d0d, type: 3}
+    - target: {fileID: 826711993594309792, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243611013660835222, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 2858199502110050581, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243086201328960024, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 6967251783443246388, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243080942297310598, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 2572981420436291690, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243456073984509160, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 1542352648704146729, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243830857127667284, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 5493828441953372823, guid: 9d9d848279280a047a8b0e208764be5e,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243967389047455698, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9d848279280a047a8b0e208764be5e, type: 3}
 --- !u!1001 &1648787401
