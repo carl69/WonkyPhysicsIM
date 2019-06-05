@@ -13,10 +13,12 @@ public class NextLevel : MonoBehaviour
     public Animator anim;
     BulletSpawner BS;
     playerMovement PM;
+    GameObject player;
 
     private void Start()
     {
-        PM = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        PM = player.GetComponent<playerMovement>();
         BS = GameObject.FindGameObjectWithTag("Camera").GetComponent<BulletSpawner>();
         AudioS = GetComponent<AudioSource>();
         GMS = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
@@ -35,6 +37,7 @@ public class NextLevel : MonoBehaviour
             AudioS.Play();
             anim.SetBool("Finish",true);
             StartCoroutine("Waiting");
+            player.SetActive(false);
         }
     }
     IEnumerator Waiting()

@@ -697,16 +697,52 @@ PrefabInstance:
       propertyPath: SlidingEffect
       value: 
       objectReference: {fileID: 5426384396589713079}
+    - target: {fileID: 717979662080814621, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243611013660835222, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 1722729183984156564, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243830857127667284, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
     - target: {fileID: 1992363086812224749, guid: bf27818e5509810429e1d7e897355300,
         type: 3}
       propertyPath: m_Radius
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2394442100528595671, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243456073984509160, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 2676697090918288296, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243086201328960024, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
     - target: {fileID: 4175821049075944188, guid: bf27818e5509810429e1d7e897355300,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.98021
       objectReference: {fileID: 0}
+    - target: {fileID: 5670642447783807018, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243967389047455698, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
+    - target: {fileID: 7079502528456503177, guid: bf27818e5509810429e1d7e897355300,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243080942297310598, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
+        type: 2}
     - target: {fileID: 4175821049075944280, guid: bf27818e5509810429e1d7e897355300,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1962,42 +1998,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.7554133e-14
       objectReference: {fileID: 0}
-    - target: {fileID: 717979662080814621, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243611013660835222, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
-    - target: {fileID: 2676697090918288296, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243086201328960024, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
-    - target: {fileID: 7079502528456503177, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243080942297310598, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
-    - target: {fileID: 2394442100528595671, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243456073984509160, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
-    - target: {fileID: 1722729183984156564, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243830857127667284, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
-    - target: {fileID: 5670642447783807018, guid: bf27818e5509810429e1d7e897355300,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243967389047455698, guid: a42f0cfc0f0c80d4b8f00110745ecba5,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf27818e5509810429e1d7e897355300, type: 3}
 --- !u!136 &1813155373549182544 stripped
@@ -2173,6 +2173,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 225566807931334903}
     m_Modifications:
+    - target: {fileID: 3416998234847230873, guid: 12afdb9d70d21204283d168a4b79443d,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
     - target: {fileID: 3416998234847230871, guid: 12afdb9d70d21204283d168a4b79443d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2228,11 +2233,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3416998234847230873, guid: 12afdb9d70d21204283d168a4b79443d,
-        type: 3}
-      propertyPath: m_Name
-      value: Audio
-      objectReference: {fileID: 0}
     - target: {fileID: 3416998234847230875, guid: 12afdb9d70d21204283d168a4b79443d,
         type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -2249,7 +2249,14 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.47
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3416998234847230869, guid: 12afdb9d70d21204283d168a4b79443d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3416998234847230869, guid: 12afdb9d70d21204283d168a4b79443d, type: 3}
+    - {fileID: 3416998234847230868, guid: 12afdb9d70d21204283d168a4b79443d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12afdb9d70d21204283d168a4b79443d, type: 3}
 --- !u!4 &1201968781497529075 stripped
 Transform:
@@ -2364,6 +2371,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 329204448}
     m_Modifications:
+    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6577279370385694739, guid: 7119d63e5d649cd41b69b2274c03c9c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2467,16 +2484,6 @@ PrefabInstance:
     - target: {fileID: 6577279370385694739, guid: 7119d63e5d649cd41b69b2274c03c9c9,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
-        type: 3}
-      propertyPath: m_Name
-      value: PauseCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6577279370385694751, guid: 7119d63e5d649cd41b69b2274c03c9c9,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6577279370385694738, guid: 7119d63e5d649cd41b69b2274c03c9c9,
