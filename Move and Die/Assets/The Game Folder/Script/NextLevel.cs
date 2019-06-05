@@ -42,7 +42,7 @@ public class NextLevel : MonoBehaviour
     }
     IEnumerator Waiting()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         LevelCanvas.SetActive(true);
 
     }
