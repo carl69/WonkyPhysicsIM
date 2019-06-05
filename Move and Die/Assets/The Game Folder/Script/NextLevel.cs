@@ -12,10 +12,12 @@ public class NextLevel : MonoBehaviour
     public GameObject LevelCanvas;
     public Animator anim;
     BulletSpawner BS;
+    playerMovement PM;
 
     private void Start()
     {
-        BS = GameObject.FindGameObjectWithTag("SpawnBullets").GetComponent<BulletSpawner>();
+        PM = GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>();
+        BS = GameObject.FindGameObjectWithTag("Camera").GetComponent<BulletSpawner>();
         AudioS = GetComponent<AudioSource>();
         GMS = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManagerScript>();
     }
@@ -25,13 +27,19 @@ public class NextLevel : MonoBehaviour
         if (other.tag == "Player" && won == false)
         {
             BS.SpawnBullets = false;// STOP CAMERA SPAWNING
-
+            GMS.StopTurrets(); // STOP TURRETS FROM SHOOTING
+            PM.enabled = false; // STOP PLAYER
             won = true;
             GMS.GameWon();
             AudioS.Play();
-            LevelCanvas.SetActive(true);
             anim.SetBool("Finish",true);
         }
+    }
+    IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(2f);
+        LevelCanvas.SetActive(true);
+
     }
     public void LevelSelect()
     {

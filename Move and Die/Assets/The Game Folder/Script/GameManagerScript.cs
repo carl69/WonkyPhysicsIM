@@ -87,5 +87,11 @@ public class GameManagerScript : MonoBehaviour
         PlayerDeaths += 1;
     }
 
-
+    public void StopTurrets()
+    {
+        foreach (MyTurret i in MTList)
+        {
+            i.Deactivated = true;
+        }
+    }
 }
